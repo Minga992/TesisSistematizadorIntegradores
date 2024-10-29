@@ -1,0 +1,130 @@
+{
+    "dotfile": {},
+    "runId": 61,
+    "stdout": {
+        "dQMin": 1e-06,
+        "dQRel": 1e-05,
+        "integrationTime": 0.391515,
+        "integrationTimeAvgStep": 0.0085112,
+        "integrationTimeAvgSubstep": 3.39077e-07,
+        "intersections": 1,
+        "numberOfThreads": 1,
+        "numberOfTracks": 22,
+        "realTime": 49.9069,
+        "resetTime": 0.00026856,
+        "resetTimeAvg": 5.83826e-06,
+        "substepAveragePerStep": 25101.1,
+        "systemTime": 5.68,
+        "totalSteps": 46,
+        "totalSubsteps": 1154650,
+        "trackData": {
+            "1": {
+                "stepCount": 18,
+                "substepCount": 2128
+            },
+            "51": {
+                "stepCount": 1,
+                "substepCount": 27797
+            },
+            "52": {
+                "stepCount": 2,
+                "substepCount": 64999
+            },
+            "53": {
+                "stepCount": 1,
+                "substepCount": 18284
+            },
+            "54": {
+                "stepCount": 1,
+                "substepCount": 22417
+            },
+            "55": {
+                "stepCount": 1,
+                "substepCount": 11260
+            },
+            "56": {
+                "stepCount": 1,
+                "substepCount": 26718
+            },
+            "57": {
+                "stepCount": 1,
+                "substepCount": 15325
+            },
+            "58": {
+                "stepCount": 1,
+                "substepCount": 24043
+            },
+            "59": {
+                "stepCount": 1,
+                "substepCount": 15686
+            },
+            "60": {
+                "stepCount": 1,
+                "substepCount": 67293
+            },
+            "61": {
+                "stepCount": 1,
+                "substepCount": 9937
+            },
+            "62": {
+                "stepCount": 3,
+                "substepCount": 260760
+            },
+            "63": {
+                "stepCount": 1,
+                "substepCount": 15242
+            },
+            "64": {
+                "stepCount": 1,
+                "substepCount": 10395
+            },
+            "65": {
+                "stepCount": 1,
+                "substepCount": 82890
+            },
+            "66": {
+                "stepCount": 1,
+                "substepCount": 15007
+            },
+            "67": {
+                "stepCount": 4,
+                "substepCount": 386526
+            },
+            "71426": {
+                "stepCount": 2,
+                "substepCount": 31560
+            },
+            "71427": {
+                "stepCount": 1,
+                "substepCount": 11252
+            },
+            "71428": {
+                "stepCount": 1,
+                "substepCount": 24410
+            },
+            "71429": {
+                "stepCount": 1,
+                "substepCount": 10721
+            }
+        },
+        "userTime": 47.16,
+        "varVX_dQMinChanges": 1209.0,
+        "varVX_dQRelChanges": 574313.0,
+        "varVX_maxError": 0.27137,
+        "varVY_dQMinChanges": 1209.0,
+        "varVY_dQRelChanges": 574313.0,
+        "varVY_maxError": 0.27137,
+        "varVZ_dQMinChanges": 1209.0,
+        "varVZ_dQRelChanges": 574313.0,
+        "varVZ_maxError": 0.27137,
+        "varX_dQMinChanges": 1209.0,
+        "varX_dQRelChanges": 574313.0,
+        "varX_maxError": 0.27137,
+        "varY_dQMinChanges": 1209.0,
+        "varY_dQRelChanges": 574313.0,
+        "varY_maxError": 0.27137,
+        "varZ_dQMinChanges": 1209.0,
+        "varZ_dQRelChanges": 574313.0,
+        "varZ_maxError": 0.27137
+    }
+}

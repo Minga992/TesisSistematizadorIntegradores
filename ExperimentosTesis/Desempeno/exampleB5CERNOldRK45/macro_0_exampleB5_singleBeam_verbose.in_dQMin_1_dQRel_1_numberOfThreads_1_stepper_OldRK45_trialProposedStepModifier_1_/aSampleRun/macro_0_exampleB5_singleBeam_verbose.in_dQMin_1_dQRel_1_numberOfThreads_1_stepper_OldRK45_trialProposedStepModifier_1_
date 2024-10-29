@@ -1,0 +1,25 @@
+# QSS Params
+/QSS/generateVTKs
+/QSS/selectStepper OldRK45
+/QSS/dQMin 1
+/QSS/dQRel 1
+/QSS/trialProposedStepModifier 1
+
+/run/numberOfThreads 1
+/run/initialize
+/tracking/verbose 1
+/run/verbose 1
+
+/B5/generator/randomizePrimary false
+/B5/generator/sigmaMomentum 0.
+/B5/generator/sigmaAngle 0.
+/run/printProgress 5
+
+/analysis/ntuple/setFileName 0 B5ntuple
+
+/B5/detector/armAngle 30. deg
+/gun/particle proton
+/B5/generator/momentum 100. GeV
+/B5/field/value 100. tesla
+
+/run/beamOn 1

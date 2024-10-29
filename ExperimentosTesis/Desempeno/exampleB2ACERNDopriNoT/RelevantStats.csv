@@ -1,0 +1,2 @@
+Example,subExample,Obs,binary,dQrel,dQmin,physics,Number of threads,intersections,Total Steps,Substeps per step,User Time(seg),Real Time(seg),System Time(seg),Average Time per step(seg),Profit User Time vs Dopri,Profit Real Time vs Dopri,Profit System Time vs Dopri,Macro Name,Experiment Folder
+PutExample,PutSubExample,PutObs,exampleB2a,N/A,N/A,PutPhysics,1,11221,381093,N/A,33.29,33.919235,0.2245,8.900513785348983e-05,N/A,N/A,N/A,macro_0_exampleB2a_withMagField.in_dQMin_1_dQRel_1_numberOfThreads_1_stepper_DoPri_trialProposedStepModifier_1_,PutExperimentFolder

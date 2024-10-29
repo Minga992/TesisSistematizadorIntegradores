@@ -1,0 +1,2 @@
+Example,subExample,Obs,binary,dQrel,dQmin,physics,Number of threads,intersections,Total Steps,Substeps per step,User Time(seg),Real Time(seg),System Time(seg),Average Time per step(seg),Profit User Time vs Dopri,Profit Real Time vs Dopri,Profit System Time vs Dopri,Macro Name,Experiment Folder
+PutExample,PutSubExample,PutObs,exampleB5,N/A,N/A,PutPhysics,1,1,42,N/A,50.32,53.419765,6.319,1.2718991666666666,N/A,N/A,N/A,macro_0_exampleB5_singleBeam_verbose.in_dQMin_1_dQRel_1_numberOfThreads_1_stepper_OldRK45_trialProposedStepModifier_1_,PutExperimentFolder

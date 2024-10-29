@@ -1,0 +1,32 @@
+# QSS Params
+/QSS/selectStepper QSS2
+/QSS/dQMin 0.000001
+/QSS/dQRel 0.00001
+/QSS/trialProposedStepModifier 0.0006
+
+/run/numberOfThreads 1
+/run/initialize
+/run/verbose 1
+
+# Enables magnetic field for exampleB4[c,d]
+/globalField/setValue 0.2 0 0 tesla
+
+# e+ 300MeV 
+/gun/particle e+
+/gun/energy 300 MeV
+/run/beamOn 1
+#
+# list the existing physics processes
+#/process/list
+#
+# switch off MultipleScattering
+#/process/inactivate msc
+#/run/beamOn 1
+#
+# switch on MultipleScattering
+#/process/activate msc 
+#
+# change detector parameter
+#/gun/particle gamma
+#/gun/energy 500 MeV
+#/run/beamOn 1

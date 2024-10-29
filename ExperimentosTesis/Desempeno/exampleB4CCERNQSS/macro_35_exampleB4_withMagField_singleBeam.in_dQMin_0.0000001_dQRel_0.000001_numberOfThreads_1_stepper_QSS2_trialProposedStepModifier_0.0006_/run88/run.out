@@ -1,0 +1,2027 @@
+
+
+          ################################
+          !!! G4Backtrace is activated !!!
+          ################################
+
+
+**************************************************************
+ Geant4 version Name: geant4-11-00-ref-02 [MT]   (28-February-2022)
+  << in Multi-threaded mode >> 
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+<<< Geant4 Physics List simulation engine: FTFP_BERT
+
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Registered graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  G4HepRepFile (HepRepFile)
+  RayTracer (RayTracer)
+  VRML2FILE (VRML2FILE)
+  gMocrenFile (gMocrenFile)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered models:
+  None
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+Registered filters:
+  None
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+"/vis/list" to see available colours.
+QSSMessenger: Selecting stepper QSS2
+
+***** Table : Nb of materials = 3 *****
+
+ Material:    G4_Pb    density: 11.350 g/cm3   RadL:   5.613 mm   Nucl.Int.Length:  18.248 cm 
+                       Imean: 823.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Pb (Pb)   Z = 82.0   N =   207   A = 207.217 g/mole
+         --->  Isotope: Pb204   Z = 82   N = 204   A = 203.97 g/mole   abundance:  1.400 %
+         --->  Isotope: Pb206   Z = 82   N = 206   A = 205.97 g/mole   abundance: 24.100 %
+         --->  Isotope: Pb207   Z = 82   N = 207   A = 206.98 g/mole   abundance: 22.100 %
+         --->  Isotope: Pb208   Z = 82   N = 208   A = 207.98 g/mole   abundance: 52.400 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+
+ Material: liquidArgon    density:  1.390 g/cm3   RadL:  14.064 cm   Nucl.Int.Length:  86.076 cm 
+                       Imean: 188.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
+         --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
+         --->  Isotope:  Ar38   Z = 18   N =  38   A =  37.96 g/mole   abundance:  0.063 %
+         --->  Isotope:  Ar40   Z = 18   N =  40   A =  39.96 g/mole   abundance: 99.600 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+
+ Material: Galactic    density:  0.000 mg/cm3  RadL: 204310098.490 pc   Nucl.Int.Length: 113427284.261 pc 
+                       Imean:  19.200 eV   temperature:   2.73 K  pressure:   0.00 atm
+
+   --->  Element: H (H)   Z =  1.0   N =     1   A =  1.008 g/mole
+         --->  Isotope:    H1   Z =  1   N =   1   A =   1.01 g/mole   abundance: 99.989 %
+         --->  Isotope:    H2   Z =  1   N =   2   A =   2.01 g/mole   abundance:  0.011 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+
+
+Checking overlaps for volume Calorimeter:0 (G4Box) ... OK! 
+Checking overlaps for volume Abso:0 (G4Box) ... OK! 
+Checking overlaps for volume Gap:0 (G4Box) ... OK! 
+
+------------------------------------------------------------
+---> The calorimeter is 10 layers of: [ 10mm of G4_Pb + 5mm of liquidArgon ] 
+------------------------------------------------------------
+
+ hInelastic FTFP_BERT : threshold between BERT and FTFP is over the interval 
+ for pions :   3 to 6 GeV
+ for kaons :   3 to 6 GeV
+ for proton :  3 to 6 GeV
+ for neutron : 3 to 6 GeV
+
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+=======================================================================
+======                 Electromagnetic Physics Parameters      ========
+=======================================================================
+LPM effect enabled                                 1
+Enable creation and use of sampling tables         0
+Apply cuts on all EM processes                     0
+Use general process                                0
+Enable linear polarisation for gamma               0
+Enable sampling of quantum entanglement            0
+X-section factor for integral approach             0.8
+Min kinetic energy for tables                      100 eV 
+Max kinetic energy for tables                      100 TeV
+Number of bins per decade of a table               7
+Verbose level                                      1
+Verbose level for worker thread                    0
+Bremsstrahlung energy threshold above which 
+  primary e+- is added to the list of secondary    100 TeV
+Bremsstrahlung energy threshold above which primary
+  muon/hadron is added to the list of secondary    100 TeV
+Lowest triplet kinetic energy                      1 MeV
+Enable sampling of gamma linear polarisation       0
+5D gamma conversion model type                     0
+5D gamma conversion model on isolated ion          0
+Livermore data directory                           livermore
+=======================================================================
+======                 Ionisation Parameters                   ========
+=======================================================================
+Step function for e+-                              (0.2, 1 mm)
+Step function for muons/hadrons                    (0.2, 0.1 mm)
+Step function for light ions                       (0.2, 0.1 mm)
+Step function for general ions                     (0.2, 0.1 mm)
+Lowest e+e- kinetic energy                         1 keV
+Lowest muon/hadron kinetic energy                  1 keV
+Fluctuations of dE/dx are enabled                  1
+Use ICRU90 data                                    0
+Use built-in Birks satuaration                     0
+Build CSDA range enabled                           0
+Use cut as a final range enabled                   0
+Enable angular generator interface                 0
+Max kinetic energy for CSDA tables                 1 GeV
+Max kinetic energy for NIEL computation            0 eV 
+Linear loss limit                                  0.01
+Read data from file for e+e- pair production by mu 0
+=======================================================================
+======                 Multiple Scattering Parameters          ========
+=======================================================================
+Type of msc step limit algorithm for e+-           1
+Type of msc step limit algorithm for muons/hadrons 0
+Msc lateral displacement for e+- enabled           1
+Msc lateral displacement for muons and hadrons     0
+Urban msc model lateral displacement alg96         1
+Range factor for msc step limit for e+-            0.04
+Range factor for msc step limit for muons/hadrons  0.2
+Geometry factor for msc step limitation of e+-     2.5
+Safety factor for msc step limit for e+-           0.6
+Skin parameter for msc step limitation of e+-      1
+Lambda limit for msc step limit for e+-            1 mm
+Use Mott correction for e- scattering              0
+Factor used for dynamic computation of angular 
+  limit between single and multiple scattering     1
+Fixed angular limit between single 
+  and multiple scattering                          3.1416 rad
+Upper energy limit for e+- multiple scattering     100 MeV
+Type of electron single scattering model           0
+Type of nuclear form-factor                        1
+Screening factor                                   1
+=======================================================================
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 61 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric : Emin=    0 eV  Emax=  100 TeV  SauterGavrila Fluo
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 7 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 56 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina : Emin=    0 eV  Emax=  100 TeV
+
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+     BetheHeitlerLPM : Emin=    0 eV  Emax=  100 TeV  ModifiedTsai
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 100 keV, 7 bins/decade, spline: 0
+      LambdaPrime table from 100 keV to 100 TeV in 63 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
+
+msc:  for e-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+
+eIoni:  for e-  XStype:1  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e-  XStype:4  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+CoulombScat:  for e- XStype:1 SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for e+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+          StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llim=1 mm
+
+eIoni:  for e+  XStype:1  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e+  XStype:4  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+annihil:  for e+ XStype:2 SubType=5 BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for e+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for proton  XStype:1  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for proton  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for proton  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for proton XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for GenericIon  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+ionIoni:  for GenericIon  XStype:1  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.02
+      Stopping Power data for 17 ion/material pairs
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+msc:  for alpha  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+ionIoni:  for alpha  XStype:1  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=7.9452 MeV
+          BetheBloch : Emin=7.9452 MeV Emax=  100 TeV
+
+msc:  for anti_proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for anti_proton  XStype:1  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for anti_proton  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for anti_proton  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for anti_proton XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for kaon+  XStype:1  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for kaon-  XStype:1  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of kaon+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+muIoni:  for mu+  XStype:1  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=  200 keV
+          BetheBloch : Emin=  200 keV Emax=    1 GeV
+        MuBetheBloch : Emin=    1 GeV Emax=  100 TeV
+
+muBrems:  for mu+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      Sampling table 21x1001; from 1 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+muIoni:  for mu-  XStype:1  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=  200 keV
+          BetheBloch : Emin=  200 keV Emax=    1 GeV
+        MuBetheBloch : Emin=    1 GeV Emax=  100 TeV
+
+muBrems:  for mu-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      Sampling table 21x1001; from 1 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of mu+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for pi+  XStype:1  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi+  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi+  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi+ XStype:1 SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 0
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+          StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llim=1 mm
+
+hIoni:  for pi-  XStype:1  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi-  XStype:1  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi-  XStype:1  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 0
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi- XStype:1 SubType=1 BuildTable=1
+      Used Lambda table of pi+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+====================================================================
+                  HADRONIC PROCESSES SUMMARY (verbose level 1)
+
+---------------------------------------------------
+                           Hadronic Processes for neutron
+
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronElasticXS: 0 eV  ---> 100 TeV
+
+  Process: neutronInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:      G4NeutronInelasticXS: 0 eV  ---> 100 TeV
+
+  Process: nCapture
+        Model:               nRadCapture: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronCaptureXS: 0 eV  ---> 100 TeV
+
+  Process: nKiller
+
+---------------------------------------------------
+                           Hadronic Processes for B-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: B-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for D-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: D-Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for GenericIon
+
+  Process: ionInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+---------------------------------------------------
+                           Hadronic Processes for He3
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+  Process: He3Inelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+---------------------------------------------------
+                           Hadronic Processes for alpha
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+  Process: alphaInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_He3
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_He3Inelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_alpha
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_alphaInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_deuteron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_deuteronInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_lambda
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: anti_lambdaInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_neutron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_neutronInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_proton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_protonInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_triton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_tritonInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for deuteron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+  Process: dInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+---------------------------------------------------
+                           Hadronic Processes for e+
+
+  Process: positronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for e-
+
+  Process: electronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for gamma
+
+  Process: photonNuclear
+        Model:               GammaNPreco: 0 eV  ---> 200 MeV
+        Model:            BertiniCascade: 199 MeV ---> 6 GeV
+        Model:           TheoFSGenerator: 3 GeV ---> 100 TeV
+     Cr_sctns:            GammaNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for kaon+
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: kaon+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for kaon-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: kaon-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for lambda
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: lambdaInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for mu+
+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for mu-
+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+
+  Process: muMinusCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for pi+
+
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+  Process: pi+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for pi-
+
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+  Process: pi-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for proton
+
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+  Process: protonInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for sigma-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: sigma-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for triton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+  Process: tInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+================================================================
+=======================================================================
+======       Pre-compound/De-excitation Physics Parameters     ========
+=======================================================================
+Type of pre-compound inverse x-section              3
+Pre-compound model active                           1
+Pre-compound excitation low energy (MeV)            0.1
+Pre-compound excitation high energy (MeV)           30
+Type of de-excitation inverse x-section             3
+Type of de-excitation factory                       Evaporation+GEM
+Number of de-excitation channels                    68
+Min excitation energy (keV)                         0.01
+Min energy per nucleon for multifragmentation (MeV) 2e+05
+Limit excitation energy for Fermi BreakUp (MeV)     20
+Level density (1/MeV)                               0.075
+Use simple level density model                      1
+Use discrete excitation energy of the residual      0
+Time limit for long lived isomeres (ns)             1
+Isomer production flag                              1
+Internal e- conversion flag                         1
+Store e- internal conversion data                   0
+Correlated gamma emission flag                      0
+Max 2J for sampling of angular correlations         10
+=======================================================================
+
+=========================================================================
+--> G4TaskRunManager::CreateAndStartWorkers() --> Initializing workers...
+=========================================================================
+
+ G4ChordFinder: stepperDriverId: 5
+---- QSStepper<QSS2>* CreateQss2Stepper(G4Mag_EqRhs* ) CALLED
+-- Created QSS-2 stepper
+-- Using QSS Driver.
+Magnetic field is active, fieldValue = (2 0 0 kG).
+
+========= Table of registered couples ============================
+
+Index : 0     used in the geometry : Yes
+ Material : Galactic
+ Range cuts        :  gamma  700 um     e-  700 um     e+  700 um  proton 700 um 
+ Energy thresholds :  gamma  1 keV    e-  1 keV    e+  1 keV proton 70 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes
+ Material : G4_Pb
+ Range cuts        :  gamma  700 um     e-  700 um     e+  700 um  proton 700 um 
+ Energy thresholds :  gamma  94.659 keV    e-  1.00699 MeV    e+  946.934 keV proton 70 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 2     used in the geometry : Yes
+ Material : liquidArgon
+ Range cuts        :  gamma  700 um     e-  700 um     e+  700 um  proton 700 um 
+ Energy thresholds :  gamma  5.19312 keV    e-  273.191 keV    e+  265.45 keV proton 70 keV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+==================================================================
+
+G4VisManager: Using G4TrajectoryDrawByCharge as fallback trajectory model.
+See commands in /vis/modeling/trajectories/ for other options.
+### Run 0 starts.
+RawVTKOutput - SetCurrentRunId - runId: 0
+ParticleMovingLog - SetCurrentRunId - runId: 0
+... set ntuple merging row mode : row-wise - done
+... create file : B4.root - done
+... open analysis file : B4.root - done
+... open main analysis file : B4.root - done
+Using 
+G4WT0 >  G4ChordFinder: stepperDriverId: 5
+G4WT0 > ---- QSStepper<QSS2>* CreateQss2Stepper(G4Mag_EqRhs* ) CALLED
+-- Created QSS-2 stepper
+G4WT0 > -- Using QSS Driver.
+G4WT0 > Magnetic field is active, fieldValue = (2 0 0 kG).
+
+========================================================================================
+--> G4TaskRunManager::CreateAndStartWorkers() --> Creating 1 tasks with 1 events/task...
+========================================================================================
+
+G4WT0 > ### Run 0 starts on worker thread 0.
+G4WT0 > RawVTKOutput - SetCurrentRunId - runId: 0
+G4WT0 > ParticleMovingLog - SetCurrentRunId - runId: 0
+G4WT0 > ... set ntuple merging row mode : row-wise - done
+G4WT0 > ... create file : B4_t0.root - done
+G4WT0 > ... open analysis file : B4.root - done
+G4WT0 > Using 
+G4WT0 > --> Event 0 starts with initial seeds (13049039,61775110).
+G4WT0 > Setting QSS precision parameters: dQRel = 1e-06 - dQMin = 1e-07
+G4WT0 > ---> End of event: 0
+G4WT0 >    Absorber: total energy: 280.64632587254 MeV       total track length: 20.223532450366 cm 
+G4WT0 >         Gap: total energy: 13.601786418632 MeV       total track length: 6.8157378279685 cm 
+G4WT0 > [thread 0] Thread-local run terminated.
+G4WT0 > [thread 0] Run Summary
+G4WT0 > [thread 0]   Number of events processed : 1
+G4WT0 > [thread 0]   User=0.100000s Real=0.101081s Sys=0.000000s [Cpu=98.9%]
+G4WT0 > 
+G4WT0 >  ----> print histograms statistic for the local thread 
+G4WT0 > 
+G4WT0 >  EAbs : mean = 280.64632587254 MeV rms = 0 eV 
+G4WT0 >  EGap : mean = 13.601786418632 MeV rms = 0 eV 
+G4WT0 >  LAbs : mean = 20.223532450366 cm  rms = 0 fm 
+G4WT0 >  LGap : mean = 6.8157378279685 cm  rms = 0 fm 
+G4WT0 > ... merge all H1 - done
+G4WT0 > ... merge all H2 - done
+G4WT0 > ... merge all H3 - done
+G4WT0 > ... merge all P1 - done
+G4WT0 > ... merge all P2 - done
+G4WT0 > ... merge slave ntuples - done
+G4WT0 > ... write file : B4_t0.root - done
+G4WT0 > ... close file : B4_t0.root - done
+G4WT0 > ... delete empty file : B4_t0.root - done
+ Run terminated.
+Run Summary
+  Number of events processed : 1
+  User=0.130000s Real=0.123097s Sys=0.000000s [Cpu=105.6%]
+
+ ----> print histograms statistic for the entire run 
+
+ EAbs : mean = 280.646 MeV rms = 0 eV 
+ EGap : mean = 13.6018 MeV rms = 0 eV 
+ LAbs : mean = 20.2235 cm  rms = 0 fm 
+ LGap : mean = 6.81574 cm  rms = 0 fm 
+... merge main ntuples - done
+... write file : B4.root - done
+... close file : B4.root - done
+Graphics systems deleted.
+Visualization Manager deleting...
+G4WT0 > Destroying WorkerRunManager (0x7f5d1004a540)
+G4WT0 > G4 kernel has come to Quit state.
+G4WT0 > ================== Deleting memory pools ===================
+G4WT0 > Number of memory pools allocated: 12; of which, static: 0
+G4WT0 > Dynamic pools deleted: 12 / Total memory freed: 0.046 MB
+G4WT0 > ============================================================
+G4WT0 > Thread-local UImanager is to be deleted.
+G4WT0 > There should not be any thread-local G4cout/G4cerr hereafter.
+RunManager is deleted.
+*** RunManager User time: 4.75
+*** RunManager Real time: 5.31834
+*** RunManager System time: 0.19
+Deleting G4ThreadLocalSingletons for type G4GeometryTolerance ...
+Deleting G4ThreadLocalSingletons for type G4ProcessTable ...
+Deleting G4ThreadLocalSingletons for type G4PhysicsListHelper ...
+Deleting G4ThreadLocalSingletons for type G4GenericAnalysisManager ...
+Deleting G4ThreadLocalSingletons for type G4GlobalMagFieldMessenger ...
+Deleting G4ThreadLocalSingletons for type G4LossTableManager ...
+Deleting G4ThreadLocalSingletons for type G4CrossSectionDataSetRegistry ...
+Deleting G4ThreadLocalSingletons for type G4HadronicInteractionRegistry ...
+Deleting G4ThreadLocalSingletons for type G4CascadeParameters ...
+ThreadPool threads: 1
+ThreadPool destroyed
+G4 kernel has come to Quit state.
+G4PropagatorInField - intersections: 21
+================== Deleting memory pools ===================
+Number of memory pools allocated: 5; of which, static: 0
+Dynamic pools deleted: 5 / Total memory freed: 0.0067 MB
+============================================================
+RunManagerKernel is deleted. Good bye :)
+QSS stats:
+dQMin: 1e-07
+dQRel: 1e-06
+ Total steps: 661
+ Total substeps: 15730
+ Substeps average per step: 23.7973
+ Substeps by track-step:
+  Track #1
+    Step 1 => 537 substeps
+    Step 2 => 6 substeps
+    Step 3 => 4 substeps
+    Step 4 => 8 substeps
+    Step 5 => 5 substeps
+    Step 6 => 94 substeps
+    Step 7 => 10 substeps
+    Step 8 => 57 substeps
+    Step 9 => 7 substeps
+    Step 10 => 17 substeps
+    Step 11 => 48 substeps
+    Step 12 => 136 substeps
+    Step 13 => 26 substeps
+    Step 14 => 33 substeps
+    Step 15 => 107 substeps
+    Step 16 => 30 substeps
+    Step 17 => 301 substeps
+    Step 18 => 34 substeps
+    Step 19 => 61 substeps
+    Step 20 => 6 substeps
+    Step 21 => 104 substeps
+    Step 22 => 125 substeps
+    Step 23 => 45 substeps
+    Step 24 => 123 substeps
+    Step 25 => 50 substeps
+    Step 26 => 30 substeps
+    Step 27 => 17 substeps
+    Step 28 => 6 substeps
+  Track #26
+    Step 1 => 6 substeps
+    Step 2 => 6 substeps
+  Track #27
+    Step 1 => 6 substeps
+  Track #28
+    Step 1 => 6 substeps
+  Track #29
+    Step 1 => 6 substeps
+  Track #30
+    Step 1 => 5 substeps
+  Track #31
+    Step 1 => 6 substeps
+  Track #32
+    Step 1 => 6 substeps
+  Track #33
+    Step 1 => 7 substeps
+  Track #34
+    Step 1 => 7 substeps
+  Track #35
+    Step 1 => 5 substeps
+  Track #36
+    Step 1 => 14 substeps
+    Step 2 => 6 substeps
+  Track #37
+    Step 1 => 21 substeps
+  Track #40
+    Step 1 => 13 substeps
+    Step 2 => 10 substeps
+  Track #41
+    Step 1 => 6 substeps
+  Track #42
+    Step 1 => 6 substeps
+  Track #43
+    Step 1 => 7 substeps
+  Track #44
+    Step 1 => 8 substeps
+  Track #45
+    Step 1 => 7 substeps
+  Track #46
+    Step 1 => 22 substeps
+    Step 2 => 17 substeps
+    Step 3 => 8 substeps
+    Step 4 => 6 substeps
+  Track #50
+    Step 1 => 4 substeps
+  Track #51
+    Step 1 => 6 substeps
+  Track #52
+    Step 1 => 6 substeps
+  Track #53
+    Step 1 => 17 substeps
+    Step 2 => 10 substeps
+    Step 3 => 6 substeps
+  Track #54
+    Step 1 => 11 substeps
+    Step 2 => 9 substeps
+    Step 3 => 9 substeps
+    Step 4 => 6 substeps
+    Step 5 => 6 substeps
+    Step 6 => 7 substeps
+    Step 7 => 6 substeps
+    Step 8 => 6 substeps
+    Step 9 => 6 substeps
+    Step 10 => 6 substeps
+    Step 11 => 6 substeps
+    Step 12 => 6 substeps
+  Track #55
+    Step 1 => 16 substeps
+    Step 2 => 11 substeps
+    Step 3 => 10 substeps
+    Step 4 => 10 substeps
+    Step 5 => 13 substeps
+    Step 6 => 15 substeps
+    Step 7 => 17 substeps
+    Step 8 => 16 substeps
+    Step 9 => 9 substeps
+  Track #58
+    Step 1 => 5 substeps
+  Track #59
+    Step 1 => 7 substeps
+  Track #60
+    Step 1 => 6 substeps
+  Track #61
+    Step 1 => 6 substeps
+  Track #64
+    Step 1 => 6 substeps
+  Track #65
+    Step 1 => 7 substeps
+  Track #66
+    Step 1 => 6 substeps
+  Track #67
+    Step 1 => 6 substeps
+  Track #68
+    Step 1 => 18 substeps
+    Step 2 => 7 substeps
+  Track #69
+    Step 1 => 15 substeps
+    Step 2 => 10 substeps
+    Step 3 => 6 substeps
+    Step 4 => 6 substeps
+  Track #71
+    Step 1 => 6 substeps
+  Track #72
+    Step 1 => 7 substeps
+  Track #73
+    Step 1 => 42 substeps
+    Step 2 => 14 substeps
+    Step 3 => 178 substeps
+    Step 4 => 78 substeps
+    Step 5 => 50 substeps
+    Step 6 => 695 substeps
+    Step 7 => 129 substeps
+    Step 8 => 166 substeps
+    Step 9 => 111 substeps
+    Step 10 => 103 substeps
+    Step 11 => 73 substeps
+    Step 12 => 6 substeps
+    Step 13 => 6 substeps
+    Step 14 => 6 substeps
+    Step 15 => 6 substeps
+    Step 16 => 6 substeps
+    Step 17 => 6 substeps
+    Step 18 => 6 substeps
+    Step 19 => 13 substeps
+    Step 20 => 12 substeps
+    Step 21 => 12 substeps
+    Step 22 => 12 substeps
+    Step 23 => 14 substeps
+    Step 24 => 13 substeps
+    Step 25 => 9 substeps
+    Step 26 => 12 substeps
+    Step 27 => 11 substeps
+    Step 28 => 11 substeps
+    Step 29 => 11 substeps
+    Step 30 => 6 substeps
+    Step 31 => 6 substeps
+    Step 32 => 6 substeps
+    Step 33 => 6 substeps
+    Step 34 => 6 substeps
+    Step 35 => 6 substeps
+    Step 36 => 9 substeps
+    Step 37 => 6 substeps
+    Step 38 => 6 substeps
+    Step 39 => 6 substeps
+    Step 40 => 5 substeps
+    Step 41 => 6 substeps
+    Step 42 => 9 substeps
+    Step 43 => 9 substeps
+    Step 44 => 9 substeps
+    Step 45 => 9 substeps
+    Step 46 => 14 substeps
+    Step 47 => 16 substeps
+    Step 48 => 21 substeps
+    Step 49 => 14 substeps
+  Track #74
+    Step 1 => 8 substeps
+    Step 2 => 12 substeps
+    Step 3 => 47 substeps
+    Step 4 => 72 substeps
+    Step 5 => 67 substeps
+    Step 6 => 492 substeps
+    Step 7 => 28 substeps
+    Step 8 => 47 substeps
+    Step 9 => 12 substeps
+    Step 10 => 18 substeps
+    Step 11 => 58 substeps
+    Step 12 => 8 substeps
+    Step 13 => 8 substeps
+    Step 14 => 7 substeps
+    Step 15 => 27 substeps
+    Step 16 => 22 substeps
+    Step 17 => 22 substeps
+    Step 18 => 28 substeps
+    Step 19 => 75 substeps
+    Step 20 => 43 substeps
+    Step 21 => 19 substeps
+    Step 22 => 6 substeps
+  Track #93
+    Step 1 => 7 substeps
+  Track #94
+    Step 1 => 7 substeps
+  Track #95
+    Step 1 => 6 substeps
+  Track #96
+    Step 1 => 6 substeps
+  Track #97
+    Step 1 => 6 substeps
+    Step 2 => 7 substeps
+    Step 3 => 6 substeps
+  Track #100
+    Step 1 => 6 substeps
+  Track #101
+    Step 1 => 6 substeps
+  Track #102
+    Step 1 => 17 substeps
+    Step 2 => 15 substeps
+    Step 3 => 17 substeps
+    Step 4 => 472 substeps
+    Step 5 => 201 substeps
+    Step 6 => 236 substeps
+    Step 7 => 211 substeps
+    Step 8 => 8 substeps
+    Step 9 => 6 substeps
+    Step 10 => 6 substeps
+    Step 11 => 7 substeps
+    Step 12 => 7 substeps
+    Step 13 => 10 substeps
+    Step 14 => 10 substeps
+    Step 15 => 8 substeps
+    Step 16 => 9 substeps
+    Step 17 => 11 substeps
+    Step 18 => 9 substeps
+    Step 19 => 10 substeps
+    Step 20 => 9 substeps
+  Track #103
+    Step 1 => 12 substeps
+    Step 2 => 7 substeps
+  Track #105
+    Step 1 => 6 substeps
+  Track #106
+    Step 1 => 34 substeps
+    Step 2 => 29 substeps
+    Step 3 => 37 substeps
+    Step 4 => 6 substeps
+  Track #107
+    Step 1 => 23 substeps
+  Track #110
+    Step 1 => 6 substeps
+  Track #111
+    Step 1 => 6 substeps
+  Track #112
+    Step 1 => 6 substeps
+  Track #113
+    Step 1 => 6 substeps
+  Track #114
+    Step 1 => 28 substeps
+  Track #115
+    Step 1 => 6 substeps
+  Track #116
+    Step 1 => 6 substeps
+  Track #117
+    Step 1 => 11 substeps
+    Step 2 => 10 substeps
+  Track #118
+    Step 1 => 6 substeps
+  Track #120
+    Step 1 => 6 substeps
+  Track #121
+    Step 1 => 11 substeps
+    Step 2 => 9 substeps
+  Track #122
+    Step 1 => 19 substeps
+    Step 2 => 17 substeps
+    Step 3 => 9 substeps
+  Track #125
+    Step 1 => 6 substeps
+  Track #126
+    Step 1 => 6 substeps
+  Track #128
+    Step 1 => 9 substeps
+  Track #129
+    Step 1 => 6 substeps
+  Track #130
+    Step 1 => 8 substeps
+  Track #131
+    Step 1 => 11 substeps
+  Track #132
+    Step 1 => 6 substeps
+  Track #133
+    Step 1 => 6 substeps
+  Track #134
+    Step 1 => 28 substeps
+    Step 2 => 56 substeps
+    Step 3 => 15 substeps
+    Step 4 => 33 substeps
+    Step 5 => 19 substeps
+    Step 6 => 10 substeps
+  Track #135
+    Step 1 => 10 substeps
+    Step 2 => 20 substeps
+    Step 3 => 8 substeps
+    Step 4 => 51 substeps
+    Step 5 => 40 substeps
+    Step 6 => 620 substeps
+    Step 7 => 44 substeps
+    Step 8 => 39 substeps
+    Step 9 => 20 substeps
+    Step 10 => 15 substeps
+  Track #139
+    Step 1 => 67 substeps
+  Track #145
+    Step 1 => 8 substeps
+  Track #146
+    Step 1 => 6 substeps
+  Track #147
+    Step 1 => 6 substeps
+  Track #148
+    Step 1 => 6 substeps
+  Track #149
+    Step 1 => 27 substeps
+    Step 2 => 12 substeps
+  Track #150
+    Step 1 => 9 substeps
+    Step 2 => 23 substeps
+    Step 3 => 52 substeps
+    Step 4 => 7 substeps
+    Step 5 => 21 substeps
+    Step 6 => 28 substeps
+    Step 7 => 8 substeps
+    Step 8 => 38 substeps
+    Step 9 => 214 substeps
+    Step 10 => 290 substeps
+    Step 11 => 12 substeps
+    Step 12 => 14 substeps
+    Step 13 => 13 substeps
+    Step 14 => 14 substeps
+    Step 15 => 13 substeps
+    Step 16 => 22 substeps
+    Step 17 => 20 substeps
+    Step 18 => 9 substeps
+  Track #157
+    Step 1 => 17 substeps
+    Step 2 => 12 substeps
+    Step 3 => 5 substeps
+    Step 4 => 11 substeps
+    Step 5 => 7 substeps
+  Track #164
+    Step 1 => 6 substeps
+  Track #165
+    Step 1 => 6 substeps
+  Track #166
+    Step 1 => 6 substeps
+  Track #167
+    Step 1 => 6 substeps
+  Track #168
+    Step 1 => 6 substeps
+  Track #169
+    Step 1 => 6 substeps
+  Track #170
+    Step 1 => 6 substeps
+  Track #171
+    Step 1 => 6 substeps
+  Track #172
+    Step 1 => 6 substeps
+    Step 2 => 6 substeps
+    Step 3 => 5 substeps
+  Track #174
+    Step 1 => 5 substeps
+  Track #175
+    Step 1 => 15 substeps
+    Step 2 => 6 substeps
+  Track #176
+    Step 1 => 12 substeps
+  Track #177
+    Step 1 => 11 substeps
+    Step 2 => 9 substeps
+    Step 3 => 6 substeps
+  Track #178
+    Step 1 => 6 substeps
+  Track #179
+    Step 1 => 6 substeps
+  Track #181
+    Step 1 => 6 substeps
+  Track #182
+    Step 1 => 5 substeps
+  Track #183
+    Step 1 => 10 substeps
+  Track #184
+    Step 1 => 6 substeps
+  Track #185
+    Step 1 => 6 substeps
+  Track #187
+    Step 1 => 6 substeps
+  Track #188
+    Step 1 => 10 substeps
+  Track #189
+    Step 1 => 10 substeps
+  Track #190
+    Step 1 => 6 substeps
+  Track #191
+    Step 1 => 10 substeps
+    Step 2 => 10 substeps
+    Step 3 => 9 substeps
+    Step 4 => 10 substeps
+    Step 5 => 8 substeps
+    Step 6 => 8 substeps
+  Track #192
+    Step 1 => 6 substeps
+  Track #193
+    Step 1 => 6 substeps
+  Track #194
+    Step 1 => 6 substeps
+  Track #195
+    Step 1 => 6 substeps
+  Track #196
+    Step 1 => 10 substeps
+  Track #197
+    Step 1 => 26 substeps
+    Step 2 => 8 substeps
+    Step 3 => 6 substeps
+    Step 4 => 32 substeps
+    Step 5 => 6 substeps
+    Step 6 => 13 substeps
+    Step 7 => 13 substeps
+    Step 8 => 11 substeps
+    Step 9 => 12 substeps
+    Step 10 => 22 substeps
+    Step 11 => 42 substeps
+    Step 12 => 10 substeps
+    Step 13 => 17 substeps
+    Step 14 => 6 substeps
+  Track #203
+    Step 1 => 14 substeps
+    Step 2 => 6 substeps
+  Track #212
+    Step 1 => 6 substeps
+  Track #213
+    Step 1 => 6 substeps
+  Track #214
+    Step 1 => 6 substeps
+  Track #215
+    Step 1 => 14 substeps
+    Step 2 => 6 substeps
+  Track #216
+    Step 1 => 10 substeps
+  Track #217
+    Step 1 => 6 substeps
+  Track #218
+    Step 1 => 6 substeps
+  Track #219
+    Step 1 => 8 substeps
+    Step 2 => 6 substeps
+  Track #221
+    Step 1 => 6 substeps
+  Track #222
+    Step 1 => 6 substeps
+  Track #223
+    Step 1 => 6 substeps
+  Track #224
+    Step 1 => 6 substeps
+  Track #225
+    Step 1 => 6 substeps
+  Track #226
+    Step 1 => 6 substeps
+  Track #227
+    Step 1 => 13 substeps
+    Step 2 => 6 substeps
+  Track #228
+    Step 1 => 6 substeps
+  Track #229
+    Step 1 => 6 substeps
+  Track #230
+    Step 1 => 6 substeps
+  Track #233
+    Step 1 => 11 substeps
+  Track #234
+    Step 1 => 48 substeps
+    Step 2 => 44 substeps
+    Step 3 => 9 substeps
+    Step 4 => 24 substeps
+    Step 5 => 20 substeps
+    Step 6 => 20 substeps
+    Step 7 => 6 substeps
+  Track #235
+    Step 1 => 12 substeps
+  Track #238
+    Step 1 => 7 substeps
+  Track #239
+    Step 1 => 5 substeps
+  Track #240
+    Step 1 => 6 substeps
+  Track #241
+    Step 1 => 7 substeps
+  Track #242
+    Step 1 => 6 substeps
+  Track #247
+    Step 1 => 6 substeps
+  Track #248
+    Step 1 => 8 substeps
+  Track #249
+    Step 1 => 6 substeps
+  Track #250
+    Step 1 => 6 substeps
+  Track #251
+    Step 1 => 6 substeps
+  Track #252
+    Step 1 => 7 substeps
+  Track #253
+    Step 1 => 6 substeps
+  Track #254
+    Step 1 => 8 substeps
+  Track #255
+    Step 1 => 6 substeps
+  Track #256
+    Step 1 => 6 substeps
+  Track #257
+    Step 1 => 6 substeps
+  Track #258
+    Step 1 => 6 substeps
+    Step 2 => 6 substeps
+    Step 3 => 6 substeps
+    Step 4 => 6 substeps
+    Step 5 => 6 substeps
+  Track #259
+    Step 1 => 7 substeps
+  Track #260
+    Step 1 => 15 substeps
+  Track #263
+    Step 1 => 5 substeps
+  Track #264
+    Step 1 => 7 substeps
+  Track #265
+    Step 1 => 54 substeps
+  Track #266
+    Step 1 => 6 substeps
+  Track #267
+    Step 1 => 5 substeps
+  Track #272
+    Step 1 => 107 substeps
+    Step 2 => 84 substeps
+    Step 3 => 23 substeps
+  Track #274
+    Step 1 => 32 substeps
+    Step 2 => 24 substeps
+    Step 3 => 17 substeps
+    Step 4 => 16 substeps
+    Step 5 => 15 substeps
+    Step 6 => 13 substeps
+    Step 7 => 14 substeps
+    Step 8 => 14 substeps
+    Step 9 => 14 substeps
+    Step 10 => 13 substeps
+    Step 11 => 15 substeps
+    Step 12 => 11 substeps
+    Step 13 => 14 substeps
+    Step 14 => 17 substeps
+    Step 15 => 19 substeps
+    Step 16 => 19 substeps
+    Step 17 => 23 substeps
+    Step 18 => 24 substeps
+  Track #275
+    Step 1 => 6 substeps
+  Track #276
+    Step 1 => 16 substeps
+    Step 2 => 11 substeps
+    Step 3 => 9 substeps
+    Step 4 => 8 substeps
+    Step 5 => 9 substeps
+    Step 6 => 9 substeps
+    Step 7 => 8 substeps
+    Step 8 => 6 substeps
+    Step 9 => 6 substeps
+    Step 10 => 6 substeps
+    Step 11 => 6 substeps
+  Track #277
+    Step 1 => 5 substeps
+  Track #278
+    Step 1 => 10 substeps
+  Track #279
+    Step 1 => 13 substeps
+  Track #282
+    Step 1 => 6 substeps
+  Track #283
+    Step 1 => 6 substeps
+  Track #284
+    Step 1 => 12 substeps
+  Track #285
+    Step 1 => 25 substeps
+    Step 2 => 17 substeps
+    Step 3 => 10 substeps
+  Track #289
+    Step 1 => 6 substeps
+  Track #290
+    Step 1 => 7 substeps
+  Track #291
+    Step 1 => 6 substeps
+  Track #292
+    Step 1 => 6 substeps
+  Track #293
+    Step 1 => 6 substeps
+  Track #294
+    Step 1 => 6 substeps
+  Track #295
+    Step 1 => 19 substeps
+    Step 2 => 7 substeps
+  Track #296
+    Step 1 => 20 substeps
+    Step 2 => 25 substeps
+    Step 3 => 17 substeps
+    Step 4 => 13 substeps
+  Track #300
+    Step 1 => 6 substeps
+  Track #301
+    Step 1 => 6 substeps
+  Track #302
+    Step 1 => 6 substeps
+  Track #303
+    Step 1 => 6 substeps
+  Track #304
+    Step 1 => 24 substeps
+  Track #305
+    Step 1 => 6 substeps
+  Track #306
+    Step 1 => 8 substeps
+  Track #307
+    Step 1 => 12 substeps
+  Track #308
+    Step 1 => 32 substeps
+    Step 2 => 13 substeps
+  Track #312
+    Step 1 => 10 substeps
+  Track #313
+    Step 1 => 6 substeps
+  Track #314
+    Step 1 => 6 substeps
+  Track #315
+    Step 1 => 5 substeps
+  Track #316
+    Step 1 => 6 substeps
+  Track #317
+    Step 1 => 5 substeps
+  Track #318
+    Step 1 => 6 substeps
+  Track #319
+    Step 1 => 33 substeps
+    Step 2 => 8 substeps
+  Track #320
+    Step 1 => 41 substeps
+    Step 2 => 56 substeps
+    Step 3 => 11 substeps
+    Step 4 => 76 substeps
+    Step 5 => 64 substeps
+  Track #321
+    Step 1 => 16 substeps
+    Step 2 => 16 substeps
+    Step 3 => 17 substeps
+    Step 4 => 16 substeps
+    Step 5 => 16 substeps
+    Step 6 => 19 substeps
+    Step 7 => 14 substeps
+    Step 8 => 11 substeps
+    Step 9 => 11 substeps
+    Step 10 => 10 substeps
+    Step 11 => 14 substeps
+    Step 12 => 6 substeps
+    Step 13 => 6 substeps
+    Step 14 => 6 substeps
+    Step 15 => 8 substeps
+    Step 16 => 8 substeps
+    Step 17 => 8 substeps
+    Step 18 => 6 substeps
+    Step 19 => 6 substeps
+    Step 20 => 6 substeps
+    Step 21 => 6 substeps
+    Step 22 => 6 substeps
+    Step 23 => 6 substeps
+    Step 24 => 6 substeps
+    Step 25 => 6 substeps
+    Step 26 => 6 substeps
+    Step 27 => 6 substeps
+    Step 28 => 6 substeps
+    Step 29 => 6 substeps
+    Step 30 => 6 substeps
+    Step 31 => 6 substeps
+    Step 32 => 6 substeps
+    Step 33 => 6 substeps
+    Step 34 => 6 substeps
+    Step 35 => 6 substeps
+    Step 36 => 6 substeps
+    Step 37 => 6 substeps
+    Step 38 => 5 substeps
+  Track #322
+    Step 1 => 6 substeps
+  Track #324
+    Step 1 => 6 substeps
+  Track #325
+    Step 1 => 28 substeps
+    Step 2 => 93 substeps
+    Step 3 => 160 substeps
+    Step 4 => 71 substeps
+    Step 5 => 11 substeps
+    Step 6 => 27 substeps
+    Step 7 => 6 substeps
+  Track #326
+    Step 1 => 24 substeps
+    Step 2 => 24 substeps
+    Step 3 => 54 substeps
+    Step 4 => 59 substeps
+    Step 5 => 6 substeps
+    Step 6 => 40 substeps
+    Step 7 => 44 substeps
+    Step 8 => 31 substeps
+    Step 9 => 44 substeps
+    Step 10 => 77 substeps
+    Step 11 => 55 substeps
+    Step 12 => 41 substeps
+    Step 13 => 44 substeps
+    Step 14 => 16 substeps
+  Track #341
+    Step 1 => 6 substeps
+  Track #342
+    Step 1 => 6 substeps
+  Track #343
+    Step 1 => 6 substeps
+  Track #344
+    Step 1 => 6 substeps
+  Track #345
+    Step 1 => 6 substeps
+  Track #346
+    Step 1 => 6 substeps
+  Track #347
+    Step 1 => 6 substeps
+  Track #348
+    Step 1 => 6 substeps
+  Track #349
+    Step 1 => 15 substeps
+    Step 2 => 6 substeps
+  Track #350
+    Step 1 => 9 substeps
+  Track #351
+    Step 1 => 6 substeps
+  Track #352
+    Step 1 => 6 substeps
+  Track #353
+    Step 1 => 6 substeps
+  Track #354
+    Step 1 => 6 substeps
+  Track #355
+    Step 1 => 4 substeps
+  Track #356
+    Step 1 => 10 substeps
+    Step 2 => 9 substeps
+    Step 3 => 9 substeps
+  Track #357
+    Step 1 => 23 substeps
+  Track #358
+    Step 1 => 6 substeps
+  Track #359
+    Step 1 => 6 substeps
+  Track #360
+    Step 1 => 7 substeps
+  Track #361
+    Step 1 => 11 substeps
+  Track #362
+    Step 1 => 5 substeps
+  Track #363
+    Step 1 => 6 substeps
+  Track #364
+    Step 1 => 6 substeps
+  Track #365
+    Step 1 => 42 substeps
+    Step 2 => 36 substeps
+    Step 3 => 26 substeps
+    Step 4 => 6 substeps
+  Track #366
+    Step 1 => 6 substeps
+  Track #369
+    Step 1 => 7 substeps
+  Track #370
+    Step 1 => 6 substeps
+  Track #371
+    Step 1 => 9 substeps
+  Track #373
+    Step 1 => 7 substeps
+  Track #374
+    Step 1 => 6 substeps
+  Track #375
+    Step 1 => 6 substeps
+    Step 2 => 6 substeps
+  Track #377
+    Step 1 => 6 substeps
+  Track #378
+    Step 1 => 6 substeps
+  Track #379
+    Step 1 => 6 substeps
+  Track #380
+    Step 1 => 25 substeps
+  Track #381
+    Step 1 => 9 substeps
+  Track #382
+    Step 1 => 49 substeps
+    Step 2 => 46 substeps
+    Step 3 => 41 substeps
+    Step 4 => 19 substeps
+  Track #383
+    Step 1 => 34 substeps
+    Step 2 => 75 substeps
+    Step 3 => 7 substeps
+    Step 4 => 74 substeps
+    Step 5 => 97 substeps
+    Step 6 => 36 substeps
+  Track #391
+    Step 1 => 6 substeps
+  Track #392
+    Step 1 => 6 substeps
+  Track #393
+    Step 1 => 10 substeps
+  Track #394
+    Step 1 => 5 substeps
+  Track #395
+    Step 1 => 29 substeps
+    Step 2 => 9 substeps
+  Track #396
+    Step 1 => 6 substeps
+  Track #397
+    Step 1 => 6 substeps
+  Track #399
+    Step 1 => 6 substeps
+  Track #400
+    Step 1 => 5 substeps
+  Track #401
+    Step 1 => 6 substeps
+  Track #402
+    Step 1 => 9 substeps
+    Step 2 => 6 substeps
+  Track #403
+    Step 1 => 6 substeps
+  Track #404
+    Step 1 => 6 substeps
+  Track #405
+    Step 1 => 6 substeps
+  Track #407
+    Step 1 => 6 substeps
+  Track #410
+    Step 1 => 8 substeps
+  Track #411
+    Step 1 => 6 substeps
+  Track #412
+    Step 1 => 7 substeps
+  Track #413
+    Step 1 => 6 substeps
+  Track #414
+    Step 1 => 11 substeps
+  Track #415
+    Step 1 => 6 substeps
+  Track #418
+    Step 1 => 7 substeps
+  Track #419
+    Step 1 => 8 substeps
+  Track #420
+    Step 1 => 103 substeps
+    Step 2 => 66 substeps
+    Step 3 => 79 substeps
+    Step 4 => 35 substeps
+    Step 5 => 21 substeps
+    Step 6 => 6 substeps
+  Track #425
+    Step 1 => 7 substeps
+  Track #426
+    Step 1 => 6 substeps
+  Track #427
+    Step 1 => 7 substeps
+  Track #428
+    Step 1 => 5 substeps
+  Track #429
+    Step 1 => 29 substeps
+    Step 2 => 6 substeps
+  Track #430
+    Step 1 => 7 substeps
+  Track #435
+    Step 1 => 6 substeps
+  Track #436
+    Step 1 => 6 substeps
+  Track #437
+    Step 1 => 6 substeps
+  Track #438
+    Step 1 => 6 substeps
+  Track #439
+    Step 1 => 6 substeps
+  Track #440
+    Step 1 => 7 substeps
+  Track #441
+    Step 1 => 10 substeps
+  Track #442
+    Step 1 => 27 substeps
+    Step 2 => 19 substeps
+  Track #443
+    Step 1 => 6 substeps
+  Track #444
+    Step 1 => 220 substeps
+    Step 2 => 22 substeps
+    Step 3 => 71 substeps
+    Step 4 => 7 substeps
+  Track #445
+    Step 1 => 25 substeps
+    Step 2 => 10 substeps
+    Step 3 => 65 substeps
+    Step 4 => 111 substeps
+    Step 5 => 98 substeps
+    Step 6 => 62 substeps
+    Step 7 => 40 substeps
+    Step 8 => 9 substeps
+  Track #446
+    Step 1 => 45 substeps
+    Step 2 => 17 substeps
+  Track #450
+    Step 1 => 10 substeps
+  Track #451
+    Step 1 => 7 substeps
+  Track #452
+    Step 1 => 6 substeps
+  Track #453
+    Step 1 => 6 substeps
+  Track #457
+    Step 1 => 33 substeps
+    Step 2 => 28 substeps
+  Track #460
+    Step 1 => 6 substeps
+  Track #461
+    Step 1 => 6 substeps
+  Track #463
+    Step 1 => 5 substeps
+  Track #464
+    Step 1 => 6 substeps
+  Track #465
+    Step 1 => 8 substeps
+  Track #466
+    Step 1 => 6 substeps
+  Track #467
+    Step 1 => 6 substeps
+  Track #468
+    Step 1 => 8 substeps
+  Track #469
+    Step 1 => 16 substeps
+  Track #471
+    Step 1 => 6 substeps
+  Track #472
+    Step 1 => 6 substeps
+  Track #473
+    Step 1 => 8 substeps
+ Integration time: 0.0115742
+ Integration time average (step): 1.75102e-05
+ Integration time average (substep): 7.35807e-07
+ Reset time: 0.00218382
+ Reset time average: 3.30381e-06
+ Variable x:
+  dQRel changes: 638
+  dQMin changes: 21
+  Max error: 4.94052e-05
+ Variable y:
+  dQRel changes: 7176
+  dQMin changes: 2334
+  Max error: 0.0719736
+ Variable z:
+  dQRel changes: 1510
+  dQMin changes: 0
+  Max error: 0.1198
+ Variable vx:
+  dQRel changes: 0
+  dQMin changes: 0
+  Max error: 0
+ Variable vy:
+  dQRel changes: 2018
+  dQMin changes: 1
+  Max error: 0.374444
+ Variable vz:
+  dQRel changes: 2032
+  dQMin changes: 0
+  Max error: 0.382328

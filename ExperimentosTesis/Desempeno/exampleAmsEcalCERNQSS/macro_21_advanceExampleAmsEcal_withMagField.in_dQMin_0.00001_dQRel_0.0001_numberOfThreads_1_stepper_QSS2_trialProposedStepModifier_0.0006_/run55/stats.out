@@ -1,0 +1,46 @@
+{
+    "dotfile": {},
+    "runId": 55,
+    "stdout": {
+        "dQMin": 1e-05,
+        "dQRel": 0.0001,
+        "integrationTime": 18.8428,
+        "integrationTimeAvgStep": 7.1754e-06,
+        "integrationTimeAvgSubstep": 5.48264e-07,
+        "intersections": 2609051,
+        "numberOfThreads": 1,
+        "numberOfTracks": 1,
+        "realTime": 221.767,
+        "resetTime": 5.45926,
+        "resetTimeAvg": 2.07891e-06,
+        "substepAveragePerStep": 13.0875,
+        "systemTime": 0.03,
+        "totalSteps": 2626025,
+        "totalSubsteps": 34368087,
+        "trackData": {
+            "1": {
+                "stepCount": 290,
+                "substepCount": 2709
+            }
+        },
+        "userTime": 221.75,
+        "varVX_dQMinChanges": 52382.0,
+        "varVX_dQRelChanges": 9335032.0,
+        "varVX_maxError": 5.33621,
+        "varVY_dQMinChanges": 52382.0,
+        "varVY_dQRelChanges": 9335032.0,
+        "varVY_maxError": 5.33621,
+        "varVZ_dQMinChanges": 52382.0,
+        "varVZ_dQRelChanges": 9335032.0,
+        "varVZ_maxError": 5.33621,
+        "varX_dQMinChanges": 52382.0,
+        "varX_dQRelChanges": 9335032.0,
+        "varX_maxError": 5.33621,
+        "varY_dQMinChanges": 52382.0,
+        "varY_dQRelChanges": 9335032.0,
+        "varY_maxError": 5.33621,
+        "varZ_dQMinChanges": 52382.0,
+        "varZ_dQRelChanges": 9335032.0,
+        "varZ_maxError": 5.33621
+    }
+}

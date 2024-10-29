@@ -1,0 +1,18 @@
+# Macro file for example B2
+# 
+# To be run preferably in batch, without graphics:
+# % exampleB2[a,b] run2.mac
+#
+
+# QSS Params
+/QSS/generateVTKs
+/QSS/selectStepper QSS2
+/QSS/dQMin 0.000001
+/QSS/dQRel 0.00001
+/QSS/trialProposedStepModifier 0.0006
+
+/run/numberOfThreads 1
+/run/initialize
+/run/verbose 1
+/globalField/setValue 0.2 0 0 tesla
+/run/beamOn 500

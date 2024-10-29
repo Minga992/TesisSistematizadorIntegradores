@@ -1,0 +1,12 @@
+{
+    "dotfile": {},
+    "runId": 3,
+    "stdout": {
+        "intersections": 1,
+        "numberOfThreads": 1,
+        "realTime": 52.8389,
+        "systemTime": 6.11,
+        "totalSteps": 41,
+        "userTime": 49.86
+    }
+}

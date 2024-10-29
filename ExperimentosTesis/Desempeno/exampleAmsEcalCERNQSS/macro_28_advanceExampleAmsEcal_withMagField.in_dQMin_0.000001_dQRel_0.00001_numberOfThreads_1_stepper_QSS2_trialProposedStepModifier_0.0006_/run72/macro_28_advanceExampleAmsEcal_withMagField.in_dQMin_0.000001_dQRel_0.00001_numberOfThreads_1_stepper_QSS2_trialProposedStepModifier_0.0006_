@@ -1,0 +1,28 @@
+#
+# Macro file for "amsEcal.cc" 
+# (can be run in batch, without graphic)
+#
+# QSS Params
+/QSS/selectStepper QSS2
+/QSS/dQMin 0.000001
+/QSS/dQRel 0.00001
+/QSS/trialProposedStepModifier 0.0006
+
+/run/numberOfThreads 1
+/control/verbose 2
+/run/verbose 2
+#
+/ams/phys/addPhysics  local
+/run/setCut 1 km
+#
+/run/initialize
+/globalField/setValue 0.2 0 0 tesla
+#
+/ams/gun/setDefault
+/gun/particle mu+
+/gun/energy 1 GeV
+/ams/gun/beam 1 cm
+#
+/run/printProgress 1000
+#
+/run/beamOn 10000

@@ -1,0 +1,863 @@
+
+
+          ################################
+          !!! G4Backtrace is activated !!!
+          ################################
+
+
+**************************************************************
+ Geant4 version Name: geant4-11-00-ref-02 [MT]   (28-February-2022)
+  << in Multi-threaded mode >> 
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+
+***** Table : Nb of materials = 4 *****
+
+ Material:     Lead    density: 10.976 g/cm3   RadL:   5.804 mm   Nucl.Int.Length:  18.870 cm 
+                       Imean: 823.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Pb (Pb)   Z = 82.0   N =   207   A = 207.217 g/mole
+         --->  Isotope: Pb204   Z = 82   N = 204   A = 203.97 g/mole   abundance:  1.400 %
+         --->  Isotope: Pb206   Z = 82   N = 206   A = 205.97 g/mole   abundance: 24.100 %
+         --->  Isotope: Pb207   Z = 82   N = 207   A = 206.98 g/mole   abundance: 22.100 %
+         --->  Isotope: Pb208   Z = 82   N = 208   A = 207.98 g/mole   abundance: 52.400 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+
+ Material: Scintillator    density:  1.032 g/cm3   RadL:  42.438 cm   Nucl.Int.Length:  70.602 cm 
+                       Imean:  65.944 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Carbon (C)   Z =  6.0   N =    12   A = 12.010 g/mole
+         --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
+         --->  Isotope:   C13   Z =  6   N =  13   A =  13.00 g/mole   abundance:  1.070 %
+          ElmMassFraction:  92.24 %  ElmAbundance  50.00 % 
+
+   --->  Element: Hydrogen (H)   Z =  1.0   N =     1   A =  1.010 g/mole
+         --->  Isotope:    H1   Z =  1   N =   1   A =   1.01 g/mole   abundance: 99.989 %
+         --->  Isotope:    H2   Z =  1   N =   2   A =   2.01 g/mole   abundance:  0.011 %
+          ElmMassFraction:   7.76 %  ElmAbundance  50.00 % 
+
+
+ Material:      Air    density:  1.290 mg/cm3  RadL: 285.161 m    Nucl.Int.Length: 662.680 m  
+                       Imean:  85.703 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Nitrogen (N)   Z =  7.0   N =    14   A = 14.010 g/mole
+         --->  Isotope:   N14   Z =  7   N =  14   A =  14.00 g/mole   abundance: 99.632 %
+         --->  Isotope:   N15   Z =  7   N =  15   A =  15.00 g/mole   abundance:  0.368 %
+          ElmMassFraction:  70.00 %  ElmAbundance  72.71 % 
+
+   --->  Element: Oxygen (O)   Z =  8.0   N =    16   A = 16.000 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance: 99.757 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:  0.038 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:  0.205 %
+          ElmMassFraction:  30.00 %  ElmAbundance  27.29 % 
+
+
+ Material: Galactic    density:  0.000 mg/cm3  RadL: 204310098.490 pc   Nucl.Int.Length: 113427284.261 pc 
+                       Imean:  19.200 eV   temperature:   2.73 K  pressure:   0.00 atm
+
+   --->  Element: H (H)   Z =  1.0   N =     1   A =  1.008 g/mole
+         --->  Isotope:    H1   Z =  1   N =   1   A =   1.01 g/mole   abundance: 99.989 %
+         --->  Isotope:    H2   Z =  1   N =   2   A =   2.01 g/mole   abundance:  0.011 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+
+
+QSSMessenger: Selecting stepper QSS2
+/run/verbose 2
+#
+/ams/phys/addPhysics local
+/run/setCut 1 km
+#
+/run/initialize
+
+==========================================================================================
+G4TaskRunManager :: Using G4ThreadPool...
+==========================================================================================
+
+userDetector->Construct() start.
+
+-------------------------------------------------------------
+ ---> The calorimeter is 9 Modules
+ ---> A Module is 10 Layers + 1 milled Layer
+ ---> A Layer is 1.73 mm  thickness of Lead
+ ---> A Layer includes 490 fibers of Scintillator
+      ---> diameter : 1.13 mm 
+      ---> length   : 66.2175 cm 
+      ---> distance : 1.35 mm 
+ ---> The milled Layer is 1 mm  thickness of Lead
+
+ ---> Module thickness 1.83 cm 
+
+ ---> Total calor thickness 16.47 cm 
+      Tranverse size        66.2175 cm 
+-------------------------------------------------------------
+
+world is registered to the default region.
+physicsList->Construct() start.
+physicsList->CheckParticleList() start.
+physicsList->setCut() start.
+/run/physicsModified
+Start closing geometry.
+G4GeometryManager::ReportVoxelStats -- Voxel Statistics
+
+    Total memory consumed for geometry optimisation:   32 kByte
+    Total CPU time elapsed for geometry optimisation: 0 seconds
+
+    Voxelisation: top CPU users:
+    Percent   Total CPU    System CPU       Memory  Volume
+    -------   ----------   ----------     --------  ----------
+       0.00         0.00         0.00           31k layer
+       0.00         0.00         0.00            1k module
+       0.00         0.00         0.00            1k calorimeter
+
+    Voxelisation: top memory users:
+    Percent     Memory      Heads    Nodes   Pointers    Total CPU    Volume
+    -------   --------     ------   ------   --------   ----------    ----------
+      94.74         30k         1      490        980         0.00    layer
+       3.16          1k         1       17         20         0.00    module
+       2.10          0k         1       10         18         0.00    calorimeter
+
+==============================================================================
+--> G4TaskRunManager::ComputeNumberOfTasks() --> 0 tasks with 1 events/task...
+==============================================================================
+
+
+=========================================================================
+--> G4TaskRunManager::CreateAndStartWorkers() --> Initializing workers...
+=========================================================================
+
+G4WT0 > /run/verbose 2
+G4WT0 > /run/setCut 1 km
+G4WT0 > /run/initialize 
+G4WT0 > /run/physicsModified 
+G4WT0 > /control/verbose 2
+G4WT0 > /run/verbose 2
+G4WT0 > /run/setCut 1 km
+G4WT0 > /run/initialize 
+G4WT0 > /run/physicsModified 
+/globalField/setValue 0.2 0 0 tesla
+ G4ChordFinder: stepperDriverId: 5
+---- QSStepper<QSS2>* CreateQss2Stepper(G4Mag_EqRhs* ) CALLED
+-- Created QSS-2 stepper
+-- Using QSS Driver.
+#
+/ams/gun/setDefault
+/gun/particle mu+
+/gun/energy 1 GeV
+/ams/gun/beam 1 cm
+#
+/run/printProgress 1000
+#
+/run/beamOn 10000
+
+Region <DefaultRegionForTheWorld> --  -- appears in <world> world volume
+ This region is in the mass world.
+ Root logical volume(s) : world 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : Galactic Lead Scintillator 
+ Production cuts :   gamma 1 km      e- 1 km      e+ 1 km  proton 1 km 
+
+Region <DefaultRegionForParallelWorld> --  -- is not associated to any world.
+ Root logical volume(s) : 
+ Pointers : G4VUserRegionInformation[0], G4UserLimits[0], G4FastSimulationManager[0], G4UserSteppingAction[0]
+ Materials : 
+ Production cuts :   gamma 1 km      e- 1 km      e+ 1 km  proton 1 km 
+
+========= Table of registered couples ============================
+
+Index : 0     used in the geometry : Yes
+ Material : Galactic
+ Range cuts        :  gamma  1 km     e-  1 km     e+  1 km  proton 1 km 
+ Energy thresholds :  gamma  1 keV    e-  1 keV    e+  1 keV proton 100 GeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 1     used in the geometry : Yes
+ Material : Lead
+ Range cuts        :  gamma  1 km     e-  1 km     e+  1 km  proton 1 km 
+ Energy thresholds :  gamma  9.54993 GeV    e-  9.54993 GeV    e+  9.54993 GeV proton 100 GeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+Index : 2     used in the geometry : Yes
+ Material : Scintillator
+ Range cuts        :  gamma  1 km     e-  1 km     e+  1 km  proton 1 km 
+ Energy thresholds :  gamma  9.54993 GeV    e-  9.54993 GeV    e+  9.54993 GeV proton 100 GeV
+ Region(s) which use this couple : 
+    DefaultRegionForTheWorld
+
+==================================================================
+
+### Run 0 starts.
+RawVTKOutput - SetCurrentRunId - runId: 0
+ParticleMovingLog - SetCurrentRunId - runId: 0
+
+--------- Ranecu engine status ---------
+ Initial seed (index) = 0
+ Current couple of seeds = 9876, 54321
+----------------------------------------
+G4WT0 > /globalField/setValue 0.2 0 0 tesla
+G4WT0 >  G4ChordFinder: stepperDriverId: 5
+G4WT0 > ---- QSStepper<QSS2>* CreateQss2Stepper(G4Mag_EqRhs* ) CALLED
+-- Created QSS-2 stepper
+G4WT0 > -- Using QSS Driver.
+G4WT0 > /ams/gun/setDefault 
+G4WT0 > /gun/particle mu+
+G4WT0 > /gun/energy 1 GeV
+G4WT0 > /ams/gun/beam 1 cm
+G4WT0 > /run/printProgress 1000
+
+============================================================================================
+--> G4TaskRunManager::CreateAndStartWorkers() --> Creating 100 tasks with 100 events/task...
+============================================================================================
+
+Adding task 0 to task-group...
+Adding task 1 to task-group...
+Adding task 2 to task-group...
+Adding task 3 to task-group...
+Adding task 4 to task-group...
+Adding task 5 to task-group...
+Adding task 6 to task-group...
+Adding task 7 to task-group...
+Adding task 8 to task-group...
+Adding task 9 to task-group...
+Adding task 10 to task-group...
+Adding task 11 to task-group...
+Adding task 12 to task-group...
+Adding task 13 to task-group...
+Adding task 14 to task-group...
+Adding task 15 to task-group...
+Adding task 16 to task-group...
+Adding task 17 to task-group...
+Adding task 18 to task-group...
+Adding task 19 to task-group...
+Adding task 20 to task-group...
+Adding task 21 to task-group...
+Adding task 22 to task-group...
+Adding task 23 to task-group...
+Adding task 24 to task-group...
+Adding task 25 to task-group...
+Adding task 26 to task-group...
+Adding task 27 to task-group...
+Adding task 28 to task-group...
+Adding task 29 to task-group...
+Adding task 30 to task-group...
+Adding task 31 to task-group...
+Adding task 32 to task-group...
+Adding task 33 to task-group...
+Adding task 34 to task-group...
+Adding task 35 to task-group...
+Adding task 36 to task-group...
+Adding task 37 to task-group...
+Adding task 38 to task-group...
+Adding task 39 to task-group...
+Adding task 40 to task-group...
+Adding task 41 to task-group...
+Adding task 42 to task-group...
+Adding task 43 to task-group...
+Adding task 44 to task-group...
+Adding task 45 to task-group...
+Adding task 46 to task-group...
+Adding task 47 to task-group...
+Adding task 48 to task-group...
+Adding task 49 to task-group...
+Adding task 50 to task-group...
+Adding task 51 to task-group...
+Adding task 52 to task-group...
+Adding task 53 to task-group...
+Adding task 54 to task-group...
+Adding task 55 to task-group...
+Adding task 56 to task-group...
+Adding task 57 to task-group...
+Adding task 58 to task-group...
+Adding task 59 to task-group...
+Adding task 60 to task-group...
+Adding task 61 to task-group...
+Adding task 62 to task-group...
+Adding task 63 to task-group...
+Adding task 64 to task-group...
+Adding task 65 to task-group...
+Adding task 66 to task-group...
+Adding task 67 to task-group...
+Adding task 68 to task-group...
+Adding task 69 to task-group...
+Adding task 70 to task-group...
+Adding task 71 to task-group...
+Adding task 72 to task-group...
+Adding task 73 to task-group...
+Adding task 74 to task-group...
+Adding task 75 to task-group...
+Adding task 76 to task-group...
+Adding task 77 to task-group...
+Adding task 78 to task-group...
+Adding task 79 to task-group...
+Adding task 80 to task-group...
+Adding task 81 to task-group...
+Adding task 82 to task-group...
+Adding task 83 to task-group...
+Adding task 84 to task-group...
+Adding task 85 to task-group...
+Adding task 86 to task-group...
+Adding task 87 to task-group...
+Adding task 88 to task-group...
+Adding task 89 to task-group...
+Adding task 90 to task-group...
+Adding task 91 to task-group...
+Adding task 92 to task-group...
+Adding task 93 to task-group...
+Adding task 94 to task-group...
+Adding task 95 to task-group...
+Adding task 96 to task-group...
+Adding task 97 to task-group...
+Adding task 98 to task-group...
+Adding task 99 to task-group...
+G4WT0 > ### Run 0 starts on worker thread 0.
+G4WT0 > RawVTKOutput - SetCurrentRunId - runId: 0
+G4WT0 > ParticleMovingLog - SetCurrentRunId - runId: 0
+G4WT0 > --> Event 0 starts with initial seeds (15470735,58711377).
+G4WT0 > Setting QSS precision parameters: dQRel = 1e-06 - dQMin = 1e-07
+G4WT0 > --> Event 1000 starts with initial seeds (71728658,19690414).
+G4WT0 > --> Event 2000 starts with initial seeds (59292523,12515448).
+G4WT0 > --> Event 3000 starts with initial seeds (57770541,22981628).
+G4WT0 > --> Event 4000 starts with initial seeds (44982723,4235798).
+G4WT0 > --> Event 5000 starts with initial seeds (90368858,11678699).
+G4WT0 > --> Event 6000 starts with initial seeds (92754086,12398389).
+G4WT0 > --> Event 7000 starts with initial seeds (90074305,33510513).
+G4WT0 > --> Event 8000 starts with initial seeds (70735303,48908849).
+G4WT0 > --> Event 9000 starts with initial seeds (75762242,76481623).
+G4WT0 > [thread 0] Thread-local run terminated.
+G4WT0 > [thread 0] Run Summary
+G4WT0 > [thread 0]   Number of events processed : 10000
+G4WT0 > [thread 0]   User=0.000000s Real=0.000917s Sys=0.010000s [Cpu=1090.2%]
+ Run terminated.
+Run Summary
+  Number of events processed : 10000
+  User=305.420000s Real=305.495437s Sys=0.090000s [Cpu=100.0%]
+
+-------------------------------------------------------------
+ ---> The calorimeter is 9 Modules
+ ---> A Module is 10 Layers + 1 milled Layer
+ ---> A Layer is 1.73 mm  thickness of Lead
+ ---> A Layer includes 490 fibers of Scintillator
+      ---> diameter : 1.13 mm 
+      ---> length   : 66.2175 cm 
+      ---> distance : 1.35 mm 
+ ---> The milled Layer is 1 mm  thickness of Lead
+
+ ---> Module thickness 1.83 cm 
+
+ ---> Total calor thickness 16.47 cm 
+      Tranverse size        66.2175 cm 
+-------------------------------------------------------------
+
+ The run was 10000 mu+ of 1 GeV through the calorimeter
+------------------------------------------------------------
+
+             total Energy          (rms/mean)      visible Energy        (rms/mean)
+
+   layer 1: 1.5244 MeV +- 2.349 MeV  (1.5e+02 %)     165.61 keV +-  1.06 MeV  (6.4e+02 %)
+   layer 2: 1.5019 MeV +- 2.119 MeV  (1.4e+02 %)     158.94 keV +- 588.3 keV  (3.7e+02 %)
+   layer 3: 1.5378 MeV +- 2.353 MeV  (1.5e+02 %)     162.54 keV +- 982.8 keV  (6e+02 %)
+   layer 4: 1.5571 MeV +- 2.781 MeV  (1.8e+02 %)     162.29 keV +-   959 keV  (5.9e+02 %)
+   layer 5: 1.6066 MeV +- 3.071 MeV  (1.9e+02 %)     157.55 keV +- 572.1 keV  (3.6e+02 %)
+   layer 6: 1.5154 MeV +- 1.993 MeV  (1.3e+02 %)      159.7 keV +-   671 keV  (4.2e+02 %)
+   layer 7: 1.5252 MeV +- 2.143 MeV  (1.4e+02 %)     158.04 keV +- 552.3 keV  (3.5e+02 %)
+   layer 8: 1.5528 MeV +- 2.737 MeV  (1.8e+02 %)     155.07 keV +- 565.6 keV  (3.6e+02 %)
+   layer 9: 1.4752 MeV +- 1.965 MeV  (1.3e+02 %)     149.02 keV +- 343.7 keV  (2.3e+02 %)
+   layer 10:  1.534 MeV +- 2.446 MeV  (1.6e+02 %)     168.99 keV +- 1.046 MeV  (6.2e+02 %)
+   layer 11: 1.4932 MeV +- 1.731 MeV  (1.2e+02 %)     159.37 keV +- 646.1 keV  (4.1e+02 %)
+   layer 12: 1.5423 MeV +-  2.72 MeV  (1.8e+02 %)     151.08 keV +- 429.4 keV  (2.8e+02 %)
+   layer 13: 1.5295 MeV +- 2.168 MeV  (1.4e+02 %)     160.35 keV +- 519.9 keV  (3.2e+02 %)
+   layer 14:  1.518 MeV +- 2.276 MeV  (1.5e+02 %)      155.6 keV +- 563.7 keV  (3.6e+02 %)
+   layer 15: 1.5376 MeV +- 2.357 MeV  (1.5e+02 %)     158.62 keV +-   561 keV  (3.5e+02 %)
+   layer 16: 1.5436 MeV +- 2.519 MeV  (1.6e+02 %)     157.61 keV +- 539.6 keV  (3.4e+02 %)
+   layer 17: 1.5361 MeV +- 2.342 MeV  (1.5e+02 %)     161.36 keV +- 726.6 keV  (4.5e+02 %)
+   layer 18: 1.5376 MeV +- 2.301 MeV  (1.5e+02 %)     152.05 keV +- 790.8 keV  (5.2e+02 %)
+   layer 19: 1.5284 MeV +- 2.509 MeV  (1.6e+02 %)      160.1 keV +- 836.7 keV  (5.2e+02 %)
+   layer 20: 1.5414 MeV +-  2.73 MeV  (1.8e+02 %)     154.65 keV +- 773.3 keV  (5e+02 %)
+   layer 21: 1.5369 MeV +- 2.338 MeV  (1.5e+02 %)     149.34 keV +- 411.9 keV  (2.8e+02 %)
+   layer 22: 1.5311 MeV +- 2.248 MeV  (1.5e+02 %)     157.06 keV +- 604.8 keV  (3.9e+02 %)
+   layer 23: 1.5484 MeV +- 2.527 MeV  (1.6e+02 %)     160.79 keV +- 732.9 keV  (4.6e+02 %)
+   layer 24: 1.4904 MeV +- 1.899 MeV  (1.3e+02 %)     164.38 keV +- 855.5 keV  (5.2e+02 %)
+   layer 25: 1.5141 MeV +- 2.255 MeV  (1.5e+02 %)     150.62 keV +- 469.2 keV  (3.1e+02 %)
+   layer 26:  1.522 MeV +- 2.175 MeV  (1.4e+02 %)     163.36 keV +- 923.4 keV  (5.7e+02 %)
+   layer 27: 1.5239 MeV +- 2.208 MeV  (1.4e+02 %)     157.41 keV +- 990.4 keV  (6.3e+02 %)
+   layer 28: 1.5001 MeV +- 1.854 MeV  (1.2e+02 %)     164.88 keV +- 937.6 keV  (5.7e+02 %)
+   layer 29:  1.533 MeV +- 2.351 MeV  (1.5e+02 %)     149.87 keV +-   413 keV  (2.8e+02 %)
+   layer 30: 1.5221 MeV +- 2.244 MeV  (1.5e+02 %)      152.7 keV +- 466.4 keV  (3.1e+02 %)
+   layer 31: 1.5362 MeV +- 2.253 MeV  (1.5e+02 %)     160.32 keV +- 495.5 keV  (3.1e+02 %)
+   layer 32: 1.5162 MeV +- 2.116 MeV  (1.4e+02 %)      171.6 keV +- 979.7 keV  (5.7e+02 %)
+   layer 33: 1.5055 MeV +- 1.971 MeV  (1.3e+02 %)     159.05 keV +- 481.7 keV  (3e+02 %)
+   layer 34: 1.5216 MeV +- 2.252 MeV  (1.5e+02 %)     153.17 keV +- 485.5 keV  (3.2e+02 %)
+   layer 35: 1.5062 MeV +- 2.222 MeV  (1.5e+02 %)     168.82 keV +- 833.5 keV  (4.9e+02 %)
+   layer 36: 1.5307 MeV +- 2.096 MeV  (1.4e+02 %)     148.76 keV +- 412.4 keV  (2.8e+02 %)
+   layer 37: 1.5022 MeV +- 1.923 MeV  (1.3e+02 %)     162.81 keV +- 895.5 keV  (5.5e+02 %)
+   layer 38: 1.5492 MeV +- 2.293 MeV  (1.5e+02 %)     155.55 keV +- 459.2 keV  (3e+02 %)
+   layer 39:  1.494 MeV +- 1.878 MeV  (1.3e+02 %)     155.51 keV +- 936.5 keV  (6e+02 %)
+   layer 40: 1.5029 MeV +- 2.251 MeV  (1.5e+02 %)     144.89 keV +- 300.2 keV  (2.1e+02 %)
+   layer 41: 1.5077 MeV +- 2.199 MeV  (1.5e+02 %)     168.69 keV +- 988.6 keV  (5.9e+02 %)
+   layer 42: 1.5647 MeV +- 2.453 MeV  (1.6e+02 %)     158.59 keV +- 760.9 keV  (4.8e+02 %)
+   layer 43: 1.5078 MeV +- 2.198 MeV  (1.5e+02 %)     153.21 keV +- 845.6 keV  (5.5e+02 %)
+   layer 44: 1.5205 MeV +- 2.297 MeV  (1.5e+02 %)     153.06 keV +- 540.5 keV  (3.5e+02 %)
+   layer 45: 1.5549 MeV +- 2.677 MeV  (1.7e+02 %)        161 keV +- 718.2 keV  (4.5e+02 %)
+   layer 46:  1.515 MeV +- 2.249 MeV  (1.5e+02 %)     163.47 keV +- 909.3 keV  (5.6e+02 %)
+   layer 47: 1.5349 MeV +- 2.451 MeV  (1.6e+02 %)     162.78 keV +- 594.2 keV  (3.7e+02 %)
+   layer 48: 1.5445 MeV +-  2.22 MeV  (1.4e+02 %)     155.83 keV +- 629.8 keV  (4e+02 %)
+   layer 49: 1.5061 MeV +- 1.924 MeV  (1.3e+02 %)      158.7 keV +- 665.8 keV  (4.2e+02 %)
+   layer 50: 1.5415 MeV +- 2.453 MeV  (1.6e+02 %)     157.32 keV +- 757.5 keV  (4.8e+02 %)
+   layer 51:  1.536 MeV +- 2.218 MeV  (1.4e+02 %)     145.53 keV +- 298.5 keV  (2.1e+02 %)
+   layer 52: 1.4956 MeV +- 1.975 MeV  (1.3e+02 %)     165.62 keV +-   821 keV  (5e+02 %)
+   layer 53: 1.5454 MeV +- 2.374 MeV  (1.5e+02 %)     155.46 keV +- 775.1 keV  (5e+02 %)
+   layer 54: 1.4853 MeV +- 1.968 MeV  (1.3e+02 %)     153.36 keV +- 598.3 keV  (3.9e+02 %)
+   layer 55: 1.4949 MeV +- 2.062 MeV  (1.4e+02 %)     151.99 keV +- 515.4 keV  (3.4e+02 %)
+   layer 56: 1.5212 MeV +-  2.21 MeV  (1.5e+02 %)     158.79 keV +- 773.1 keV  (4.9e+02 %)
+   layer 57: 1.5384 MeV +- 2.214 MeV  (1.4e+02 %)     164.96 keV +- 930.2 keV  (5.6e+02 %)
+   layer 58: 1.5402 MeV +- 2.569 MeV  (1.7e+02 %)     169.43 keV +- 920.3 keV  (5.4e+02 %)
+   layer 59:  1.515 MeV +- 2.234 MeV  (1.5e+02 %)     146.82 keV +- 289.8 keV  (2e+02 %)
+   layer 60: 1.4922 MeV +- 1.832 MeV  (1.2e+02 %)     154.41 keV +- 561.9 keV  (3.6e+02 %)
+   layer 61:  1.494 MeV +- 1.983 MeV  (1.3e+02 %)     157.29 keV +- 597.4 keV  (3.8e+02 %)
+   layer 62: 1.5012 MeV +- 1.783 MeV  (1.2e+02 %)      156.8 keV +- 425.5 keV  (2.7e+02 %)
+   layer 63: 1.4955 MeV +- 1.956 MeV  (1.3e+02 %)     162.61 keV +- 776.1 keV  (4.8e+02 %)
+   layer 64: 1.5255 MeV +- 2.283 MeV  (1.5e+02 %)     165.12 keV +- 933.8 keV  (5.7e+02 %)
+   layer 65: 1.5174 MeV +- 2.089 MeV  (1.4e+02 %)     158.56 keV +- 776.8 keV  (4.9e+02 %)
+   layer 66: 1.5579 MeV +- 2.581 MeV  (1.7e+02 %)     153.73 keV +-   449 keV  (2.9e+02 %)
+   layer 67: 1.5052 MeV +- 2.042 MeV  (1.4e+02 %)      148.7 keV +- 359.4 keV  (2.4e+02 %)
+   layer 68: 1.5026 MeV +- 2.092 MeV  (1.4e+02 %)     149.43 keV +- 295.7 keV  (2e+02 %)
+   layer 69: 1.5083 MeV +- 2.081 MeV  (1.4e+02 %)     154.24 keV +- 650.1 keV  (4.2e+02 %)
+   layer 70: 1.5242 MeV +- 1.996 MeV  (1.3e+02 %)     160.25 keV +- 748.6 keV  (4.7e+02 %)
+   layer 71: 1.5272 MeV +- 2.033 MeV  (1.3e+02 %)      159.9 keV +- 709.6 keV  (4.4e+02 %)
+   layer 72: 1.4834 MeV +- 1.888 MeV  (1.3e+02 %)     163.19 keV +- 960.2 keV  (5.9e+02 %)
+   layer 73: 1.5441 MeV +- 2.285 MeV  (1.5e+02 %)     163.85 keV +- 765.5 keV  (4.7e+02 %)
+   layer 74: 1.5118 MeV +- 2.007 MeV  (1.3e+02 %)     157.94 keV +- 478.5 keV  (3e+02 %)
+   layer 75: 1.4983 MeV +- 1.891 MeV  (1.3e+02 %)     155.79 keV +- 454.3 keV  (2.9e+02 %)
+   layer 76: 1.4829 MeV +-  1.84 MeV  (1.2e+02 %)     161.93 keV +- 760.6 keV  (4.7e+02 %)
+   layer 77:  1.524 MeV +- 1.991 MeV  (1.3e+02 %)     156.29 keV +- 698.1 keV  (4.5e+02 %)
+   layer 78: 1.4925 MeV +- 2.125 MeV  (1.4e+02 %)     163.56 keV +- 989.4 keV  (6e+02 %)
+   layer 79: 1.4973 MeV +- 1.793 MeV  (1.2e+02 %)     158.41 keV +- 728.3 keV  (4.6e+02 %)
+   layer 80: 1.4855 MeV +- 2.113 MeV  (1.4e+02 %)     164.04 keV +-   1.1 MeV  (6.7e+02 %)
+   layer 81: 1.4878 MeV +- 1.845 MeV  (1.2e+02 %)      158.9 keV +- 598.4 keV  (3.8e+02 %)
+   layer 82: 1.5038 MeV +- 1.941 MeV  (1.3e+02 %)     147.99 keV +- 321.2 keV  (2.2e+02 %)
+   layer 83:  1.555 MeV +- 2.392 MeV  (1.5e+02 %)     162.94 keV +- 658.6 keV  (4e+02 %)
+   layer 84: 1.5056 MeV +- 2.074 MeV  (1.4e+02 %)     161.52 keV +- 756.6 keV  (4.7e+02 %)
+   layer 85: 1.5184 MeV +- 2.185 MeV  (1.4e+02 %)     163.05 keV +-   802 keV  (4.9e+02 %)
+   layer 86: 1.5101 MeV +- 2.018 MeV  (1.3e+02 %)      161.3 keV +- 589.4 keV  (3.7e+02 %)
+   layer 87: 1.5308 MeV +- 2.155 MeV  (1.4e+02 %)     157.38 keV +- 729.5 keV  (4.6e+02 %)
+   layer 88: 1.5317 MeV +- 2.372 MeV  (1.5e+02 %)     154.72 keV +-   566 keV  (3.7e+02 %)
+   layer 89: 1.5078 MeV +- 1.723 MeV  (1.1e+02 %)     154.46 keV +- 737.4 keV  (4.8e+02 %)
+   layer 90:   1.47 MeV +- 1.818 MeV  (1.2e+02 %)     158.31 keV +- 754.5 keV  (4.8e+02 %)
+
+   total calor : 149.12 MeV +- 21.19 MeV  ( 14 %)     14.231 MeV +- 6.626 MeV  ( 47 %)
+------------------------------------------------------------
+
+   Leakage : 850.88 MeV +- 21.19 MeV
+   Eleak/Ebeam =85.1 %  ( forward =85.1 %;   backward =   0 %;   lateral =0.00607 %)
+
+--------- Ranecu engine status ---------
+ Initial seed (index) = 0
+ Current couple of seeds = 1982454223, 1571101230
+----------------------------------------
+G4WT0 > Destroying WorkerRunManager (0x7ff18804a840)
+G4WT0 > G4 kernel has come to Quit state.
+G4WT0 > UserDetectorConstruction deleted.
+G4WT0 > UserPhysicsList deleted.
+G4WT0 > UserActionInitialization deleted.
+G4WT0 > UserWorkerInitialization deleted.
+G4WT0 > UserWorkerThreadInitialization deleted.
+G4WT0 > UserRunAction deleted.
+G4WT0 > UserPrimaryGenerator deleted.
+G4WT0 > RunManager is deleting RunManagerKernel.
+G4WT0 > G4SDManager deleted.
+G4WT0 > EventManager deleted.
+G4WT0 > Units table cleared.
+G4WT0 > TransportationManager deleted.
+G4WT0 > Total navigation history collections cleaned: 7
+G4WT0 > ================== Deleting memory pools ===================
+G4WT0 > Pool ID '20G4NavigationLevelRep', size : 0.00865 MB
+G4WT0 > Pool ID '24G4ReferenceCountedHandleIvE', size : 0.000961 MB
+G4WT0 > Pool ID '7G4Event', size : 0.000961 MB
+G4WT0 > Pool ID '15G4PrimaryVertex', size : 0.000961 MB
+G4WT0 > Pool ID '17G4PrimaryParticle', size : 0.000961 MB
+G4WT0 > Pool ID '17G4DynamicParticle', size : 0.000961 MB
+G4WT0 > Pool ID '7G4Track', size : 0.000961 MB
+G4WT0 > Pool ID '18G4TouchableHistory', size : 0.000961 MB
+G4WT0 > Pool ID '15G4CountedObjectIvE', size : 0.000961 MB
+G4WT0 > Number of memory pools allocated: 9; of which, static: 0
+G4WT0 > Dynamic pools deleted: 9 / Total memory freed: 0.016 MB
+G4WT0 > ============================================================
+G4WT0 > G4Allocator objects are deleted.
+G4WT0 > Thread-local UImanager is to be deleted.
+G4WT0 > There should not be any thread-local G4cout/G4cerr hereafter.
+RunManager is deleted.
+*** RunManager User time: 308.43
+*** RunManager Real time: 308.513
+*** RunManager System time: 0.1
+Deleting G4ThreadLocalSingletons for type G4GeometryTolerance ...
+Deleting G4ThreadLocalSingletons for type G4ProcessTable ...
+Deleting G4ThreadLocalSingletons for type G4PhysicsListHelper ...
+Deleting G4ThreadLocalSingletons for type G4LossTableManager ...
+Deleting G4ThreadLocalSingletons for type G4GenericAnalysisManager ...
+Deleting G4ThreadLocalSingletons for type G4GlobalMagFieldMessenger ...
+ThreadPool threads: 1
+ThreadPool destroyed
+G4 kernel has come to Quit state.
+UserDetectorConstruction deleted.
+UserPhysicsList deleted.
+UserActionInitialization deleted.
+UserWorkerInitialization deleted.
+UserWorkerThreadInitialization deleted.
+UserRunAction deleted.
+UserPrimaryGenerator deleted.
+RunManager is deleting RunManagerKernel.
+G4SDManager deleted.
+EventManager deleted.
+Units table cleared.
+G4PropagatorInField - intersections: 2609141
+TransportationManager deleted.
+Total navigation history collections cleaned: 3
+G4RNGHelper object is deleted.
+================== Deleting memory pools ===================
+Pool ID '20G4NavigationLevelRep', size : 0.00288 MB
+Pool ID '24G4ReferenceCountedHandleIvE', size : 0.000961 MB
+Pool ID '16G4SmartVoxelNode', size : 0.0308 MB
+Pool ID '17G4SmartVoxelProxy', size : 0.0154 MB
+Pool ID '15G4CountedObjectIvE', size : 0.000961 MB
+Number of memory pools allocated: 5; of which, static: 0
+Dynamic pools deleted: 5 / Total memory freed: 0.051 MB
+============================================================
+G4Allocator objects are deleted.
+UImanager deleted.
+StateManager deleted.
+RunManagerKernel is deleted. Good bye :)
+QSS stats:
+dQMin: 1e-07
+dQRel: 1e-06
+ Total steps: 2626115
+ Total substeps: 184895076
+ Substeps average per step: 70.4063
+ Substeps by track-step:
+  Track #1
+    Step 1 => 2 substeps
+    Step 2 => 2 substeps
+    Step 3 => 18 substeps
+    Step 4 => 78 substeps
+    Step 5 => 18 substeps
+    Step 6 => 18 substeps
+    Step 7 => 78 substeps
+    Step 8 => 18 substeps
+    Step 9 => 18 substeps
+    Step 10 => 78 substeps
+    Step 11 => 18 substeps
+    Step 12 => 18 substeps
+    Step 13 => 18 substeps
+    Step 14 => 78 substeps
+    Step 15 => 18 substeps
+    Step 16 => 18 substeps
+    Step 17 => 18 substeps
+    Step 18 => 78 substeps
+    Step 19 => 18 substeps
+    Step 20 => 18 substeps
+    Step 21 => 17 substeps
+    Step 22 => 78 substeps
+    Step 23 => 18 substeps
+    Step 24 => 18 substeps
+    Step 25 => 18 substeps
+    Step 26 => 18 substeps
+    Step 27 => 18 substeps
+    Step 28 => 78 substeps
+    Step 29 => 18 substeps
+    Step 30 => 18 substeps
+    Step 31 => 78 substeps
+    Step 32 => 18 substeps
+    Step 33 => 18 substeps
+    Step 34 => 78 substeps
+    Step 35 => 18 substeps
+    Step 36 => 18 substeps
+    Step 37 => 78 substeps
+    Step 38 => 18 substeps
+    Step 39 => 18 substeps
+    Step 40 => 78 substeps
+    Step 41 => 18 substeps
+    Step 42 => 18 substeps
+    Step 43 => 77 substeps
+    Step 44 => 17 substeps
+    Step 45 => 18 substeps
+    Step 46 => 77 substeps
+    Step 47 => 17 substeps
+    Step 48 => 17 substeps
+    Step 49 => 77 substeps
+    Step 50 => 17 substeps
+    Step 51 => 18 substeps
+    Step 52 => 78 substeps
+    Step 53 => 18 substeps
+    Step 54 => 18 substeps
+    Step 55 => 78 substeps
+    Step 56 => 18 substeps
+    Step 57 => 18 substeps
+    Step 58 => 17 substeps
+    Step 59 => 14 substeps
+    Step 60 => 78 substeps
+    Step 61 => 18 substeps
+    Step 62 => 18 substeps
+    Step 63 => 78 substeps
+    Step 64 => 18 substeps
+    Step 65 => 18 substeps
+    Step 66 => 78 substeps
+    Step 67 => 18 substeps
+    Step 68 => 17 substeps
+    Step 69 => 18 substeps
+    Step 70 => 78 substeps
+    Step 71 => 18 substeps
+    Step 72 => 18 substeps
+    Step 73 => 18 substeps
+    Step 74 => 78 substeps
+    Step 75 => 18 substeps
+    Step 76 => 18 substeps
+    Step 77 => 78 substeps
+    Step 78 => 18 substeps
+    Step 79 => 18 substeps
+    Step 80 => 78 substeps
+    Step 81 => 18 substeps
+    Step 82 => 18 substeps
+    Step 83 => 78 substeps
+    Step 84 => 18 substeps
+    Step 85 => 18 substeps
+    Step 86 => 18 substeps
+    Step 87 => 18 substeps
+    Step 88 => 78 substeps
+    Step 89 => 18 substeps
+    Step 90 => 18 substeps
+    Step 91 => 78 substeps
+    Step 92 => 18 substeps
+    Step 93 => 18 substeps
+    Step 94 => 18 substeps
+    Step 95 => 78 substeps
+    Step 96 => 18 substeps
+    Step 97 => 18 substeps
+    Step 98 => 18 substeps
+    Step 99 => 78 substeps
+    Step 100 => 18 substeps
+    Step 101 => 18 substeps
+    Step 102 => 78 substeps
+    Step 103 => 18 substeps
+    Step 104 => 18 substeps
+    Step 105 => 78 substeps
+    Step 106 => 18 substeps
+    Step 107 => 18 substeps
+    Step 108 => 78 substeps
+    Step 109 => 18 substeps
+    Step 110 => 18 substeps
+    Step 111 => 78 substeps
+    Step 112 => 18 substeps
+    Step 113 => 18 substeps
+    Step 114 => 18 substeps
+    Step 115 => 18 substeps
+    Step 116 => 78 substeps
+    Step 117 => 18 substeps
+    Step 118 => 18 substeps
+    Step 119 => 78 substeps
+    Step 120 => 18 substeps
+    Step 121 => 18 substeps
+    Step 122 => 78 substeps
+    Step 123 => 18 substeps
+    Step 124 => 18 substeps
+    Step 125 => 18 substeps
+    Step 126 => 78 substeps
+    Step 127 => 18 substeps
+    Step 128 => 18 substeps
+    Step 129 => 18 substeps
+    Step 130 => 78 substeps
+    Step 131 => 18 substeps
+    Step 132 => 18 substeps
+    Step 133 => 78 substeps
+    Step 134 => 18 substeps
+    Step 135 => 18 substeps
+    Step 136 => 78 substeps
+    Step 137 => 18 substeps
+    Step 138 => 18 substeps
+    Step 139 => 78 substeps
+    Step 140 => 18 substeps
+    Step 141 => 18 substeps
+    Step 142 => 18 substeps
+    Step 143 => 18 substeps
+    Step 144 => 78 substeps
+    Step 145 => 18 substeps
+    Step 146 => 18 substeps
+    Step 147 => 78 substeps
+    Step 148 => 18 substeps
+    Step 149 => 18 substeps
+    Step 150 => 78 substeps
+    Step 151 => 18 substeps
+    Step 152 => 18 substeps
+    Step 153 => 18 substeps
+    Step 154 => 78 substeps
+    Step 155 => 18 substeps
+    Step 156 => 18 substeps
+    Step 157 => 78 substeps
+    Step 158 => 18 substeps
+    Step 159 => 18 substeps
+    Step 160 => 18 substeps
+    Step 161 => 78 substeps
+    Step 162 => 18 substeps
+    Step 163 => 18 substeps
+    Step 164 => 78 substeps
+    Step 165 => 18 substeps
+    Step 166 => 18 substeps
+    Step 167 => 78 substeps
+    Step 168 => 18 substeps
+    Step 169 => 18 substeps
+    Step 170 => 18 substeps
+    Step 171 => 18 substeps
+    Step 172 => 78 substeps
+    Step 173 => 18 substeps
+    Step 174 => 18 substeps
+    Step 175 => 78 substeps
+    Step 176 => 18 substeps
+    Step 177 => 18 substeps
+    Step 178 => 78 substeps
+    Step 179 => 18 substeps
+    Step 180 => 18 substeps
+    Step 181 => 78 substeps
+    Step 182 => 18 substeps
+    Step 183 => 18 substeps
+    Step 184 => 78 substeps
+    Step 185 => 18 substeps
+    Step 186 => 18 substeps
+    Step 187 => 78 substeps
+    Step 188 => 18 substeps
+    Step 189 => 18 substeps
+    Step 190 => 78 substeps
+    Step 191 => 18 substeps
+    Step 192 => 18 substeps
+    Step 193 => 78 substeps
+    Step 194 => 18 substeps
+    Step 195 => 18 substeps
+    Step 196 => 78 substeps
+    Step 197 => 18 substeps
+    Step 198 => 18 substeps
+    Step 199 => 78 substeps
+    Step 200 => 18 substeps
+    Step 201 => 18 substeps
+    Step 202 => 18 substeps
+    Step 203 => 18 substeps
+    Step 204 => 78 substeps
+    Step 205 => 18 substeps
+    Step 206 => 18 substeps
+    Step 207 => 78 substeps
+    Step 208 => 18 substeps
+    Step 209 => 18 substeps
+    Step 210 => 78 substeps
+    Step 211 => 18 substeps
+    Step 212 => 18 substeps
+    Step 213 => 78 substeps
+    Step 214 => 18 substeps
+    Step 215 => 18 substeps
+    Step 216 => 78 substeps
+    Step 217 => 18 substeps
+    Step 218 => 18 substeps
+    Step 219 => 78 substeps
+    Step 220 => 18 substeps
+    Step 221 => 18 substeps
+    Step 222 => 18 substeps
+    Step 223 => 78 substeps
+    Step 224 => 18 substeps
+    Step 225 => 18 substeps
+    Step 226 => 78 substeps
+    Step 227 => 18 substeps
+    Step 228 => 18 substeps
+    Step 229 => 18 substeps
+    Step 230 => 18 substeps
+    Step 231 => 18 substeps
+    Step 232 => 78 substeps
+    Step 233 => 18 substeps
+    Step 234 => 18 substeps
+    Step 235 => 78 substeps
+    Step 236 => 18 substeps
+    Step 237 => 18 substeps
+    Step 238 => 78 substeps
+    Step 239 => 18 substeps
+    Step 240 => 18 substeps
+    Step 241 => 78 substeps
+    Step 242 => 18 substeps
+    Step 243 => 18 substeps
+    Step 244 => 78 substeps
+    Step 245 => 18 substeps
+    Step 246 => 18 substeps
+    Step 247 => 78 substeps
+    Step 248 => 18 substeps
+    Step 249 => 18 substeps
+    Step 250 => 18 substeps
+    Step 251 => 78 substeps
+    Step 252 => 18 substeps
+    Step 253 => 18 substeps
+    Step 254 => 78 substeps
+    Step 255 => 18 substeps
+    Step 256 => 18 substeps
+    Step 257 => 18 substeps
+    Step 258 => 8 substeps
+    Step 259 => 8 substeps
+    Step 260 => 8 substeps
+    Step 261 => 18 substeps
+    Step 262 => 18 substeps
+    Step 263 => 78 substeps
+    Step 264 => 18 substeps
+    Step 265 => 18 substeps
+    Step 266 => 8 substeps
+    Step 267 => 8 substeps
+    Step 268 => 8 substeps
+    Step 269 => 8 substeps
+    Step 270 => 8 substeps
+    Step 271 => 6 substeps
+    Step 272 => 6 substeps
+    Step 273 => 78 substeps
+    Step 274 => 18 substeps
+    Step 275 => 18 substeps
+    Step 276 => 8 substeps
+    Step 277 => 8 substeps
+    Step 278 => 8 substeps
+    Step 279 => 8 substeps
+    Step 280 => 8 substeps
+    Step 281 => 18 substeps
+    Step 282 => 8 substeps
+    Step 283 => 8 substeps
+    Step 284 => 8 substeps
+    Step 285 => 78 substeps
+    Step 286 => 18 substeps
+    Step 287 => 18 substeps
+    Step 288 => 8 substeps
+    Step 289 => 8 substeps
+    Step 290 => 8 substeps
+ Integration time: 85.9408
+ Integration time average (step): 3.27255e-05
+ Integration time average (substep): 4.64809e-07
+ Reset time: 6.34284
+ Reset time average: 2.41529e-06
+ Variable x:
+  dQRel changes: 2616116
+  dQMin changes: 9999
+  Max error: 9.882e-05
+ Variable y:
+  dQRel changes: 66467826
+  dQMin changes: 412144
+  Max error: 50.3535
+ Variable z:
+  dQRel changes: 66220111
+  dQMin changes: 405566
+  Max error: 66.7399
+ Variable vx:
+  dQRel changes: 0
+  dQMin changes: 0
+  Max error: 0
+ Variable vy:
+  dQRel changes: 71859845
+  dQMin changes: 319541
+  Max error: 2.40429
+ Variable vz:
+  dQRel changes: 71846585
+  dQMin changes: 319252
+  Max error: 2.23196
